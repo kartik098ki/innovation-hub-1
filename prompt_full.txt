@@ -1,0 +1,690 @@
+<USER_REQUEST>
+Please update the existing **Innovation Hub / RIDE Hack 2026 website** using all the screenshots and images I have provided.
+
+## ⚠️ CRITICAL — PRESERVE THE EXISTING DESIGN
+
+Do NOT redesign the website from scratch.
+
+The current website already has a good visual identity. Keep the **same original colour theme, typography, backgrounds, animations, visual language and overall UI/UX direction**.
+
+I only want the requested changes and improvements below.
+
+The final website should look like a polished, premium, professional **Innovation Hub / startup ecosystem website**, not like a generic AI-generated template.
+
+---
+
+# 1. MAIN LOGO — VERY IMPORTANT
+
+Use the **Innovation Hub logo that I provided earlier** as the main website logo.
+
+### IMPORTANT:
+
+Do NOT write:
+
+* RIDEHACK beside the logo
+* RIDE HACK beside the logo
+* Any other text beside the Innovation Hub logo
+
+The header should simply have the **Innovation Hub logo**.
+
+Use the actual logo image I provided earlier.
+
+Do not create a new logo.
+
+---
+
+# 2. HEADER / NAVIGATION
+
+Keep the existing navigation but improve spacing.
+
+Do not make the navigation cramped.
+
+### Remove:
+
+**Join Community**
+
+from the navigation.
+
+### Add:
+
+**Register**
+
+as the primary CTA.
+
+The Register button should match the existing website's design and colour theme.
+
+---
+
+# 3. STICKY HEADER / SCROLL BEHAVIOUR
+
+This is very important.
+
+### At the top of the homepage:
+
+Show the normal complete navigation:
+
+**[ Innovation Hub Logo ]   Home      Team   Timeline   Contact   [ REGISTER ]**
+
+### When the user scrolls down:
+
+The header should become compact.
+
+Show only:
+
+**[ Innovation Hub Logo ]                    [ REGISTER ]**
+
+The logo and Register button should have a clean, comfortable gap.
+
+Do not keep showing the entire navigation after scrolling if the current design collapses it.
+
+The transition should be smooth and premium.
+
+Register should **always remain accessible**.
+
+---
+
+# 4. HOMEPAGE — ₹1 CRORE PRESENTATION
+
+There is currently a large:
+
+**₹1 CRORE**
+
+text on the homepage which does not look good / is being duplicated / is taking too much space.
+
+Remove the current oversized or duplicated presentation.
+
+Instead create a **clean, premium ₹1 Cr presentation** on the homepage.
+
+Use:
+
+### ₹1 Cr+
+
+**Grand Prize Pool & Grants**
+
+OR a similarly elegant short presentation.
+
+Do NOT write:
+
+**GRAND CHAMPIONSHIP PRIZE POOL**
+
+as a huge separate heading.
+
+Do NOT repeat ₹1 CRORE multiple times across the homepage.
+
+The ₹1 Cr information should appear **once prominently and beautifully in the appropriate hero/home section**.
+
+Keep it visually impactful but not oversized.
+
+---
+
+# 5. HOMEPAGE STATISTICS
+
+Update the statistics section to exactly:
+
+### 400+
+
+PARTICIPANTS
+
+### 10+
+
+PITCH TRACKS
+
+### 1L+
+
+ALUMNI NETWORK
+
+### 100+
+
+INSTITUTES
+
+### ₹1 Cr+
+
+FUNDING POOL
+
+Make sure all five values are properly visible.
+
+Especially fix the existing issue where:
+
+**₹1 Cr+**
+
+is not appearing correctly.
+
+Check desktop, laptop and mobile rendering.
+
+No text should be clipped or hidden.
+
+---
+
+# 6. JOIN COMMUNITY — CHANGE TO WHATSAPP
+
+There is a Join Community section/button on the homepage.
+
+Do NOT remove the concept completely.
+
+Instead redesign it as:
+
+### WhatsApp icon + Join Community
+
+Use the **WhatsApp logo/icon**.
+
+Make the button/CTA green in the existing design language.
+
+Keep approximately the same size and prominence as the current Join Community button.
+
+It should look like:
+
+**[ WhatsApp Icon ] Join Community**
+
+Make it clickable.
+
+Do not make it oversized.
+
+Keep it clean and premium.
+
+---
+
+# 7. EXPLORE RIDEHACK BUTTON
+
+The existing:
+
+**Explore RIDEHACK**
+
+CTA should actually work.
+
+When clicked, open a dedicated RIDE Hack information page.
+
+The page should contain:
+
+## About RIDE Hack
+
+Explain:
+
+* What RIDE Hack is
+* Purpose of the hackathon
+* Who can participate
+* What participants can expect
+* Startup and innovation focus
+* Pitching opportunities
+* Networking opportunities
+
+Keep the content professional and concise.
+
+---
+
+# 8. RIDE HACK 2026 — DOMAINS
+
+Change the section heading from the generic current version to:
+
+# DOMAINS TO EXPLORE IN RIDEHACK 2026
+
+Since this is startup-focused, add domains that are relevant to **startups, innovation, entrepreneurship and emerging businesses**.
+
+Include suitable startup-related domains such as:
+
+### AI & Emerging Technology
+
+AI, GenAI, automation, robotics and emerging technologies.
+
+### FinTech
+
+Digital finance, payments, financial inclusion and financial innovation.
+
+### HealthTech
+
+Healthcare innovation, digital health, diagnostics and healthcare accessibility.
+
+### EdTech
+
+Education, learning platforms, skill development and student innovation.
+
+### ClimateTech & Sustainability
+
+Clean technology, climate solutions, sustainability and circular economy.
+
+### Mobility & Transportation
+
+Smart mobility, logistics, transportation and future mobility.
+
+### AgriTech
+
+Agriculture, food systems, rural innovation and smart farming.
+
+### ConsumerTech
+
+Consumer products, digital services, marketplaces and new-age businesses.
+
+### SaaS & Enterprise
+
+B2B software, productivity, enterprise solutions and business automation.
+
+### Social Innovation
+
+Technology and business models solving meaningful social problems.
+
+Use cards similar to the existing website.
+
+Keep the cards visually consistent with the original colour theme.
+
+---
+
+# 9. GRANT / PRIZE SECTION SPACING
+
+The Grant / Prize section currently looks visually merged because there is not enough separation.
+
+Fix this.
+
+Create clear visual gaps between:
+
+* Hero
+* Statistics
+* Prize / Grant section
+* Domains
+* Other sections
+
+Do not make everything touch each other.
+
+Use proper:
+
+* Padding
+* Margins
+* Section spacing
+* Typography hierarchy
+
+The sections should feel distinct while still being part of one website.
+
+---
+
+# 10. VIDEO AUTOPLAY ON SCROLL
+
+There is a video section lower on the homepage.
+
+When the user scrolls down and the video enters the viewport:
+
+### Automatically start playing the video.
+
+Requirements:
+
+* Autoplay
+* Muted by default
+* Plays automatically when visible
+* Works on desktop
+* Works on mobile where browser policies permit
+* Smooth transition
+* Do not require the user to manually press play
+
+Use viewport/intersection-based behaviour so the video starts naturally when the user reaches it.
+
+If the browser prevents autoplay with sound, keep it muted so autoplay still works.
+
+---
+
+# 11. TEAM SECTION — REDESIGN PROPERLY
+
+The Team section needs to look much more polished.
+
+Use the **team images I provided earlier**.
+
+Create a proper dedicated Team presentation.
+
+Instead of the current awkward heading:
+
+**THE TEAM BEHIND RIDEHACK 2026**
+
+where the text is currently partially above/partially below, fix the typography and positioning.
+
+Make the heading properly aligned.
+
+Use a polished heading such as:
+
+# Meet Our Visionaries
+
+Then a smaller supporting line:
+
+**The people building the vision behind RIDE Hack 2026.**
+
+Make this visually distinct from the rest of the page.
+
+---
+
+# 12. FACULTY ADVISORS — FIRST
+
+Before showing the core team, create:
+
+# Faculty Advisors
+
+Add the two faculty advisors using the images I provided.
+
+### Mukesh
+
+Use the Mukesh image I provided.
+
+### Akanksha Mehendiratta
+
+Use the provided image.
+
+Name must appear exactly:
+
+**Akanksha Mehendiratta**
+
+Make both cards consistent.
+
+Use:
+
+* Image
+* Name
+* Role
+* Clean card
+* Proper spacing
+
+---
+
+# 13. CORE TEAM
+
+After Faculty Advisors, create:
+
+# Core Team
+
+Use the team images from the third screenshot I provided.
+
+Add:
+
+* Correct photo
+* Correct name
+* Correct designation
+
+Do not use random stock images.
+
+Do not distort the images.
+
+Maintain equal image dimensions and clean alignment.
+
+Desktop:
+
+* Multiple cards per row
+
+Mobile:
+
+* Single-column or carefully responsive grid
+
+---
+
+# 14. TEAM PAGE / SECTION VISUAL STYLE
+
+The Team section should feel like its own premium section.
+
+Use:
+
+* Large but controlled heading
+* Clear Faculty Advisors separation
+* Core Team separation
+* Proper whitespace
+* Elegant cards
+* Subtle hover animation
+
+Do not over-animate.
+
+The section should look professional and human, not AI-generated.
+
+---
+
+# 15. TIMELINE SECTION
+
+Add a proper RIDE Hack 2026 timeline.
+
+Include:
+
+### Applications Open
+
+Use the existing application opening date if already present.
+
+### Last Date to Apply
+
+**15 October 2026**
+
+### Event
+
+**RIDE Hack — Offline Event**
+
+**1 November 2026**
+
+Make the timeline visually attractive.
+
+Use a clean horizontal timeline on desktop.
+
+On mobile, convert it into a vertical timeline.
+
+Make the dates very easy to read.
+
+---
+
+# 16. CONTACT SECTION
+
+Update the Contact section.
+
+Add:
+
+## Contact
+
+### Call Us
+
+**YASH:** +91 7210000082
+
+**Saloni:** +91 8700497761
+
+Make the phone numbers clickable using `tel:` links.
+
+Keep the contact section visually consistent with the existing website.
+
+---
+
+# 17. FOOTER — REDESIGN / RESTORE PROPERLY
+
+The current bottom/footer does not look good.
+
+Rebuild the footer so that it matches the **original visual style shown in the earlier screenshot**.
+
+Important:
+
+Do NOT make the footer look like a generic website footer.
+
+Use:
+
+* Existing colour theme
+* Proper spacing
+* Innovation Hub branding
+* Navigation links
+* Contact information
+* Social links where applicable
+* Copyright
+* Proper responsive layout
+
+Make the footer visually strong but not oversized.
+
+There should be a proper separation between the final content section and footer.
+
+---
+
+# 18. MOBILE RESPONSIVENESS
+
+This is extremely important.
+
+The entire website must work beautifully on mobile.
+
+Check:
+
+### Header
+
+* Logo fits
+* Register button fits
+* Sticky header works
+* No horizontal overflow
+
+### Hero
+
+* Text scales properly
+* ₹1 Cr+ remains visible
+* Buttons fit
+
+### Statistics
+
+Stack/wrap naturally.
+
+### Domains
+
+Cards become single-column or responsive two-column depending on screen width.
+
+### Team
+
+Faculty Advisors and Core Team cards stack properly.
+
+### Timeline
+
+Convert to vertical timeline.
+
+### Contact
+
+Phone numbers remain readable and clickable.
+
+### Footer
+
+Everything stacks properly.
+
+There must be:
+
+**NO horizontal scrolling anywhere on mobile.**
+
+---
+
+# 19. DESKTOP / LAPTOP
+
+On desktop and laptop:
+
+* Maintain maximum content width
+* Keep sections centered
+* Use generous whitespace
+* Keep cards aligned
+* Maintain consistent grid widths
+* Keep navigation properly spaced
+* Avoid excessive empty space
+* Avoid elements touching each other
+
+---
+
+# 21. UI/UX QUALITY
+
+The final website should feel:
+
+* Premium
+* Modern
+* Professional
+* Startup-focused
+* Innovation-focused
+* Clean
+* Spacious
+* Responsive
+* Human-designed
+
+Avoid:
+
+* Excessive rounded boxes everywhere
+* Huge text everywhere
+* Random gradients
+* Excessive animations
+* Generic AI website aesthetics
+* Poor spacing
+* Cluttered sections
+
+#
+
+---
+
+# 23. IMPORTANT — DO NOT DUPLICATE CONTENT
+
+Please clean up the homepage so that information is not repeated unnecessarily.
+
+Especially:
+
+**₹1 CRORE**
+
+should not appear as multiple giant headings throughout the homepage.
+
+Keep one strong ₹1 Cr+ presentation in the appropriate upper/home section and use the statistics version where required.
+
+Similarly, don't repeat the same RIDE Hack information across multiple sections unnecessarily.
+
+---
+
+# 24. FINAL QUALITY CHECK
+
+Before finishing, verify:
+
+* [ ] Innovation Hub logo from provided image is used
+* [ ] No “RIDEHACK” text beside logo
+* [ ] Navigation properly spaced
+* [ ] Join Community removed from navigation
+* [ ] Register added
+* [ ] Register visible at top
+* [ ] Register remains visible while scrolling
+* [ ] Scrolled header shows Logo + Register
+* [ ] 400+ Participants visible
+* [ ] 10+ Pitch Tracks visible
+* [ ] 1L+ Alumni Network visible
+* [ ] 100+ Institutes visible
+* [ ] ₹1 Cr+ Funding Pool visible
+* [ ] ₹1 Cr presentation fixed
+* [ ] No oversized duplicated ₹1 CRORE text
+* [ ] WhatsApp Join Community button added
+* [ ] WhatsApp button is green
+* [ ] Explore RIDEHACK works
+* [ ] RIDE Hack information page works
+* [ ] About RIDE Hack added
+* [ ] All domains/tracks added
+* [ ] Startup-related domains included
+* [ ] Video autoplays when scrolled into view
+* [ ] Faculty Advisors section added first
+* [ ] Mukesh added
+* [ ] Akanksha Mehendiratta added
+* [ ] Core Team added after Faculty Advisors
+* [ ] Team photos properly displayed
+* [ ] “Meet Our Visionaries” section looks polished
+* [ ] Broken “THE TEAM BEHIND RIDEHACK 2026” heading fixed
+* [ ] Timeline added
+* [ ] Last Date to Apply: 15 October 2026
+* [ ] Offline Event: 1 November 2026
+* [ ] Contact section updated
+* [ ] YASH phone number added
+* [ ] Saloni phone number added
+* [ ] Footer redesigned to match original style
+* [ ] Grant section spacing fixed
+* [ ] Mobile tested
+* [ ] Laptop tested
+* [ ] Desktop tested
+* [ ] No horizontal scrolling
+* [ ] No overlapping text
+* [ ] No clipped ₹1 Cr+
+* [ ] No broken images
+* [ ] Existing colour theme preserved
+
+## FINAL INSTRUCTION
+
+Use the screenshots/images I provided as the **exact visual reference**.
+
+I want the website to look like the **same original Innovation Hub website**, just significantly more polished and complete.
+
+Do not change things that I did not ask you to change.
+
+Pay special attention to:
+
+**spacing + typography + responsive behaviour + header scrolling + ₹1 Cr presentation + team section + timeline + footer + mobile UI/UX.**
+
+Everything should feel intentional, premium and professionally designed.
+
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-10-01T01:59:56+05:30.
+
+The user has uploaded 2 image(s):
+- /Users/kartikguleria/.gemini/antigravity/brain/38660415-6601-400f-ae31-9a3ff342fa63/.user_uploaded/media_1790800124355.png
+- /Users/kartikguleria/.gemini/antigravity/brain/38660415-6601-400f-ae31-9a3ff342fa63/.user_uploaded/media_1790800188639.png
+You can embed these images in an artifact if you need the USER to review them.
+</ADDITIONAL_METADATA>

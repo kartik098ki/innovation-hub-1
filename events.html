@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ridehack 2026 • Startup Pitching Tracks | Innovation Hub JIIT</title>
+  <meta name="description" content="Explore Ridehack 2026 tracks, venture grants, incubation, and eligibility. JIIT's premier startup pitching event with a ₹1 Crore funding pool.">
+  <link rel="icon" type="image/png" href="innovation-logo.png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="background-animation.js" defer></script>
+  <script src="coming-soon.js" defer></script>
+</head>
+<body class="bg-[#05020a] text-white min-h-screen font-sans selection:bg-purple-500 selection:text-white">
+
+  <!-- UNIFIED FLOATING NAVBAR -->
+  <div class="fixed top-0 left-0 right-0 z-50 hidden md:flex justify-center pt-5 pointer-events-none px-4">
+    <div class="pointer-events-auto rounded-full flex items-center overflow-hidden transition-all duration-300" style="box-shadow: rgba(0, 0, 0, 0.4) 0px 8px 32px -8px; border: 1px solid rgba(255, 255, 255, 0.12); background-color: rgba(5,2,10,0.92); backdrop-filter: blur(24px); padding: 8px 24px; height: 64px; min-height: 64px; max-height: 64px; width: min(95%, 1120px);">
+      <div class="flex items-center justify-between w-full px-2">
+        <!-- LOGO (NO RIDEHACK TEXT) -->
+        <div id="navbarLogo" class="shrink-0 flex items-center transition-all duration-300 opacity-100 translate-y-0">
+          <a class="flex items-center cursor-pointer group" href="index.html">
+            <img alt="Innovation Hub Logo" class="h-10 w-auto object-contain group-hover:scale-105 transition-transform" src="innovation-logo.png">
+          </a>
+        </div>
+                <!-- SPACIOUS NAV LINKS -->
+        <div id="navbarLinks" class="flex items-center justify-center gap-3 lg:gap-6 mx-auto transition-all duration-300 opacity-100 pointer-events-auto overflow-hidden">
+          <a href="index.html" class="px-3 py-1.5 text-xs sm:text-sm font-medium transition-colors rounded-full whitespace-nowrap text-gray-300 hover:text-white hover:bg-white/5">Home</a>
+          <a href="index.html#about" class="px-3 py-1.5 text-xs sm:text-sm font-medium transition-colors rounded-full whitespace-nowrap text-gray-300 hover:text-white hover:bg-white/5">About</a>
+          <a href="events.html" class="px-3 py-1.5 text-xs sm:text-sm font-medium transition-colors rounded-full whitespace-nowrap text-gray-300 hover:text-white hover:bg-white/5">Domains</a>
+          <a href="sponsors.html" class="px-3 py-1.5 text-xs sm:text-sm font-medium transition-colors rounded-full whitespace-nowrap text-gray-300 hover:text-white hover:bg-white/5">Grants</a>
+          <a href="team.html" class="px-3 py-1.5 text-xs sm:text-sm font-medium transition-colors rounded-full whitespace-nowrap text-gray-300 hover:text-white hover:bg-white/5">Team</a>
+          <a href="javascript:void(0)" onclick="openComingSoonModal('Speaker Registrations')" class="px-3 py-1.5 text-xs sm:text-sm font-medium transition-colors rounded-full whitespace-nowrap text-gray-300 hover:text-white hover:bg-white/5">Speakers</a>
+          <a href="contact.html" class="px-3 py-1.5 text-xs sm:text-sm font-medium transition-colors rounded-full whitespace-nowrap text-gray-300 hover:text-white hover:bg-white/5">Contact</a>
+        </div>
+        <!-- REGISTER BUTTON -->
+        <div id="navbarRegister" class="shrink-0 flex items-center transition-all duration-300">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfo1yDY9sdHcOif3eGItnUyBE8StgveHDqJppyfqZ0NtJaWwg/viewform" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white rounded-full text-sm font-extrabold tracking-wide transition-all shadow-[0_0_20px_rgba(168,85,247,0.5)] hover:scale-105">
+            <span>Register</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MOBILE TOP BAR -->
+  <div class="fixed top-0 left-0 right-0 z-50 md:hidden">
+    <div class="flex items-center justify-between px-4 py-3 bg-[#05020a]/95 backdrop-blur-md border-b border-white/10">
+      <a class="flex items-center" href="index.html">
+        <img alt="Innovation Hub Logo" class="h-8 w-auto object-contain" src="innovation-logo.png">
+      </a>
+      <div class="flex items-center gap-3">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfo1yDY9sdHcOif3eGItnUyBE8StgveHDqJppyfqZ0NtJaWwg/viewform" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-full text-xs font-bold shadow-[0_0_12px_rgba(168,85,247,0.4)]">
+          Register
+        </a>
+        <button id="mobileMenuBtn" onclick="toggleMobileMenu()" aria-label="Toggle mobile menu" class="w-9 h-9 flex items-center justify-center rounded-lg bg-white/5 border border-white/10 text-white hover:bg-white/10 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+    <!-- MOBILE MENU DRAWER -->
+  <div id="mobileMenuDrawer" style="display:none; position:fixed; top:58px; left:0; right:0; background:rgba(5,2,10,0.98); backdrop-filter:blur(24px); border-bottom:1px solid rgba(255,255,255,0.1); padding:24px 20px; z-index:9999;">
+    <div style="display:flex; flex-direction:column; gap:16px; align-items:center;">
+      <a href="index.html" style="color:#d1d5db; font-size:16px; font-weight:500; text-decoration:none;">Home</a>
+      <a href="index.html#about" style="color:#d1d5db; font-size:16px; font-weight:500; text-decoration:none;">About</a>
+      <a href="events.html" style="color:#d1d5db; font-size:16px; font-weight:500; text-decoration:none;">Domains</a>
+      <a href="sponsors.html" style="color:#d1d5db; font-size:16px; font-weight:500; text-decoration:none;">Grants</a>
+      <a href="team.html" style="color:#d1d5db; font-size:16px; font-weight:500; text-decoration:none;">Team</a>
+      <a href="javascript:void(0)" onclick="openComingSoonModal('Speaker Registrations')" style="color:#d1d5db; font-size:16px; font-weight:500; text-decoration:none;">Speakers</a>
+      <a href="contact.html" style="color:#d1d5db; font-size:16px; font-weight:500; text-decoration:none;">Contact</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfo1yDY9sdHcOif3eGItnUyBE8StgveHDqJppyfqZ0NtJaWwg/viewform" target="_blank" rel="noopener noreferrer" style="margin-top:6px; background:linear-gradient(to right, #9333ea, #4f46e5); color:white; font-size:14px; font-weight:700; text-decoration:none; padding:10px 28px; border-radius:9999px; display:inline-flex; align-items:center; gap:8px;">
+        <span>Register</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+      </a>
+    </div>
+  </div>
+
+  <main class="pt-32 sm:pt-40 pb-20 px-4 sm:px-6 lg:px-12 max-w-7xl mx-auto">
+
+    <!-- HERO HEADER -->
+    <div class="text-center max-w-4xl mx-auto mb-16 sm:mb-24">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-purple-500/15 border border-purple-500/30 text-purple-300 text-xs sm:text-sm font-bold uppercase tracking-wider mb-6">
+        <span class="w-2 h-2 rounded-full bg-purple-400 animate-pulse"></span>
+        JIIT's Premier Startup Pitching Event • 01 NOV 2026
+      </div>
+
+      <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black text-white tracking-tight uppercase mb-6 leading-tight">
+        RIDEHACK 2026 <br>
+        <span style="background: linear-gradient(to right, #c084fc, #f472b6, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; color: #c084fc;">
+          DOMAINS & PITCH TRACKS
+        </span>
+      </h1>
+
+      <p class="text-gray-300 text-base sm:text-xl leading-relaxed mb-8 max-w-3xl mx-auto">
+        Pitch your venture directly before active VC partners, angel networks, and serial entrepreneurs for equity investment, ₹1 Crore total prize pool & grants, and incubation at the Innovation Hub, JIIT Sector 128 Noida.
+      </p>
+
+      <!-- 1 CRORE PRIZE POOL BADGE -->
+      <div class="inline-flex items-center gap-3 px-6 sm:px-8 py-3 rounded-full border border-purple-400/50 bg-gradient-to-r from-purple-950/80 via-purple-900/60 to-indigo-950/80 shadow-[0_0_35px_rgba(168,85,247,0.5)] mb-8">
+        <span class="w-3 h-3 rounded-full bg-green-400 animate-pulse shadow-[0_0_12px_#4ade80]"></span>
+        <span style="font-weight: 900; font-size: 1.5rem; color: #ffffff; text-shadow: 0 0 15px rgba(168,85,247,0.8);">
+          ₹1 CRORE
+        </span>
+        <span class="text-xs sm:text-sm text-purple-200 font-extrabold uppercase tracking-wider pl-3 border-l border-white/20">
+          Grand Prize Pool & Grants
+        </span>
+      </div>
+
+      <!-- CTA BUTTONS -->
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfo1yDY9sdHcOif3eGItnUyBE8StgveHDqJppyfqZ0NtJaWwg/viewform" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-8 py-3.5 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white rounded-full text-sm sm:text-base font-extrabold tracking-wide transition-all shadow-[0_0_25px_rgba(168,85,247,0.5)] hover:scale-105">
+          <span>Register for RIDE Hack 2026</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+        </a>
+        <a href="sponsors.html" class="inline-flex items-center gap-2 px-7 py-3.5 bg-white/10 hover:bg-white/15 text-white rounded-full text-sm sm:text-base font-semibold transition-all border border-white/10">
+          <span>View Grant Details ↗</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- WHAT IS RIDEHACK SECTION -->
+    <div class="mb-20 sm:mb-28 p-8 sm:p-12 rounded-3xl bg-white/[0.03] border border-white/10 backdrop-blur-md">
+      <div class="flex items-center gap-4 mb-4">
+        <span class="w-10 h-[2px] bg-purple-400"></span>
+        <span class="text-xs sm:text-sm font-bold uppercase tracking-widest text-purple-300">About the Flagship Event</span>
+      </div>
+      <h2 class="text-2xl sm:text-4xl font-extrabold text-white mb-6">Connecting Student Innovators with Institutional Capital</h2>
+      <p class="text-gray-300 text-base sm:text-lg leading-relaxed mb-8">
+        Ridehack 2026 is the signature startup accelerator and pitching showcase organized by the <strong>Innovation Hub at Jaypee Institute of Information Technology (JIIT Sector 128 Noida)</strong>. We identify, fund, and support visionary student founders building market-ready solutions across deep-tech, artificial intelligence, enterprise software, hardware, and climate resilience.
+      </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="p-6 rounded-2xl bg-black/40 border border-white/10">
+          <div class="text-3xl mb-3">🏛️</div>
+          <h3 class="text-lg font-bold text-white mb-1">JIIT 128 Incubation</h3>
+          <p class="text-gray-400 text-xs sm:text-sm">Physical workspace, prototyping labs, computing resources, and faculty guidance.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-black/40 border border-white/10">
+          <div class="text-3xl mb-3">💰</div>
+          <h3 class="text-lg font-bold text-white mb-1">Non-Dilutive Grants</h3>
+          <p class="text-gray-400 text-xs sm:text-sm">Category-based cash awards across 5 tracks to build and deploy your working MVP.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-black/40 border border-white/10">
+          <div class="text-3xl mb-3">🚀</div>
+          <h3 class="text-lg font-bold text-white mb-1">VC & Angel Syndicates</h3>
+          <p class="text-gray-400 text-xs sm:text-sm">Fast-tracked intros to leading venture capital funds, institutional partners, and angels.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-black/40 border border-white/10">
+          <div class="text-3xl mb-3">🤝</div>
+          <h3 class="text-lg font-bold text-white mb-1">1-on-1 Pitch Clinics</h3>
+          <p class="text-gray-400 text-xs sm:text-sm">Intensive deck refinement and unit economics coaching for shortlisted finalist cohorts.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5 STARTUP TRACKS IN DETAIL -->
+    <div id="tracks" class="mb-20 sm:mb-28">
+      <div class="flex items-center gap-4 mb-4">
+        <span class="w-10 h-[2px] bg-purple-400"></span>
+        <span class="text-xs sm:text-sm font-bold uppercase tracking-widest text-purple-300">Pitch Domains</span>
+      </div>
+      <h2 class="text-3xl sm:text-5xl font-extrabold text-white mb-4">THE 5 SECTOR TRACKS</h2>
+      <p class="text-gray-400 text-base sm:text-lg mb-12 max-w-3xl">
+        Review each track's problem spaces, eligibility, and evaluation parameters. Teams may submit their venture in the track that best aligns with their primary core technology.
+      </p>
+
+      <div class="space-y-8">
+        
+        <!-- TRACK 1 -->
+        <div class="p-8 sm:p-10 rounded-3xl bg-gradient-to-br from-[#120824] via-[#0a0514] to-black border border-purple-500/30 hover:border-purple-400/60 transition-all shadow-xl">
+          <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-white/10">
+            <div>
+              <span class="text-xs uppercase font-extrabold tracking-widest text-purple-300 px-3 py-1 rounded-full bg-purple-500/20 border border-purple-400/30 inline-block mb-3">Track 01</span>
+              <h3 class="text-2xl sm:text-3xl font-black text-white">AI &amp; Autonomous DeepTech</h3>
+              <p class="text-purple-300 text-sm mt-1">Foundation Models, Agentic Workflows, Computer Vision &amp; Generative Intelligence</p>
+            </div>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfo1yDY9sdHcOif3eGItnUyBE8StgveHDqJppyfqZ0NtJaWwg/viewform" target="_blank" rel="noopener noreferrer" class="shrink-0 px-6 py-2.5 rounded-full bg-purple-600/30 hover:bg-purple-600 text-purple-200 hover:text-white text-xs sm:text-sm font-bold transition-all border border-purple-500/40 text-center">
+              Apply to Track ↗
+            </a>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6 text-sm">
+            <div>
+              <h4 class="font-bold text-gray-200 uppercase text-xs tracking-wider mb-2">Scope &amp; Problem Spaces</h4>
+              <p class="text-gray-400 leading-relaxed">Multi-agent collaboration, domain-specific LLM fine-tuning, automated code analysis, speech synthesis, autonomous edge vision, and neuro-symbolic reasoning.</p>
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-200 uppercase text-xs tracking-wider mb-2">Evaluation Criteria</h4>
+              <p class="text-gray-400 leading-relaxed">Algorithm novelty, inference latency, data moat, business viability, and functional prototype demonstrations.</p>
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-200 uppercase text-xs tracking-wider mb-2">Track Incentives</h4>
+              <p class="text-gray-400 leading-relaxed">Non-dilutive seed grant pool, GPU compute credits, direct intros to AI-focused venture syndicates.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- TRACK 2 -->
+        <div class="p-8 sm:p-10 rounded-3xl bg-gradient-to-br from-[#120824] via-[#0a0514] to-black border border-purple-500/30 hover:border-purple-400/60 transition-all shadow-xl">
+          <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-white/10">
+            <div>
+              <span class="text-xs uppercase font-extrabold tracking-widest text-pink-300 px-3 py-1 rounded-full bg-pink-500/20 border border-pink-400/30 inline-block mb-3">Track 02</span>
+              <h3 class="text-2xl sm:text-3xl font-black text-white">FinTech, DeFi &amp; Open Finance</h3>
+              <p class="text-pink-300 text-sm mt-1">Cross-Border Rails, Algorithmic Underwriting, Micro-Lending &amp; Web3 Infrastructure</p>
+            </div>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfo1yDY9sdHcOif3eGItnUyBE8StgveHDqJppyfqZ0NtJaWwg/viewform" target="_blank" rel="noopener noreferrer" class="shrink-0 px-6 py-2.5 rounded-full bg-pink-600/30 hover:bg-pink-600 text-pink-200 hover:text-white text-xs sm:text-sm font-bold transition-all border border-pink-500/40 text-center">
+              Apply to Track ↗
+            </a>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6 text-sm">
+            <div>
+              <h4 class="font-bold text-gray-200 uppercase text-xs tracking-wider mb-2">Scope &amp; Problem Spaces</h4>
+              <p class="text-gray-400 leading-relaxed">Real-time fraud detection, decentralized identity, programmable cross-border payments, compliance tooling, and alternative credit underwriting models.</p>
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-200 uppercase text-xs tracking-wider mb-2">Evaluation Criteria</h4>
+              <p class="text-gray-400 leading-relaxed">Security posture, regulatory compliance awareness, unit margins, and distribution strategy.</p>
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-200 uppercase text-xs tracking-wider mb-2">Track Incentives</h4>
+              <p class="text-gray-400 leading-relaxed">Banking API sandbox credits, regulatory mentorship, and term sheet evaluations from FinTech syndicates.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- TRACK 3 -->
+        <div class="p-8 sm:p-10 rounded-3xl bg-gradient-to-br from-[#120824] via-[#0a0514] to-black border border-purple-500/30 hover:border-purple-400/60 transition-all shadow-xl">
+          <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-white/10">
+            <div>
+              <span class="text-xs uppercase font-extrabold tracking-widest text-indigo-300 px-3 py-1 rounded-full bg-indigo-500/20 border border-indigo-400/30 inline-block mb-3">Track 03</span>
+              <h3 class="text-2xl sm:text-3xl font-black text-white">Enterprise SaaS &amp; Cloud Infra</h3>
+              <p class="text-indigo-300 text-sm mt-1">Developer Tooling, Data Engineering, Cybersecurity &amp; Workflow Automation</p>
+            </div>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfo1yDY9sdHcOif3eGItnUyBE8StgveHDqJppyfqZ0NtJaWwg/viewform" target="_blank" rel="noopener noreferrer" class="shrink-0 px-6 py-2.5 rounded-full bg-indigo-600/30 hover:bg-indigo-600 text-indigo-200 hover:text-white text-xs sm:text-sm font-bold transition-all border border-indigo-500/40 text-center">
+              Apply to Track ↗
+            </a>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6 text-sm">
+            <div>
+              <h4 class="font-bold text-gray-200 uppercase text-xs tracking-wider mb-2">Scope &amp; Problem Spaces</h4>
+              <p class="text-gray-400 leading-relaxed">Distributed cloud architecture, observability platforms, CI/CD automated security testing, enterprise knowledge graphs, and privacy-preserving data sharing.</p>
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-200 uppercase text-xs tracking-wider mb-2">Evaluation Criteria</h4>
+              <p class="text-gray-400 leading-relaxed">Customer validation, ARR pipeline potential, enterprise integration friction, and system scalability.</p>
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-200 uppercase text-xs tracking-wider mb-2">Track Incentives</h4>
+              <p class="text-gray-400 leading-relaxed">Major cloud hosting credits, pilot introductions with enterprise tech leaders, and cash grant pool.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- TRACK 4 -->
+        <div class="p-8 sm:p-10 rounded-3xl bg-gradient-to-br from-[#120824] via-[#0a0514] to-black border border-purple-500/30 hover:border-purple-400/60 transition-all shadow-xl">
+          <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-white/10">
+            <div>
+              <span class="text-xs uppercase font-extrabold tracking-widest text-emerald-300 px-3 py-1 rounded-full bg-emerald-500/20 border border-emerald-400/30 inline-block mb-3">Track 04</span>
+              <h3 class="text-2xl sm:text-3xl font-black text-white">Robotics, Hardware &amp; Smart Drones</h3>
+              <p class="text-emerald-300 text-sm mt-1">Autonomous Aerial Systems, Embedded Edge Systems, Industrial Automation &amp; IoT</p>
+            </div>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfo1yDY9sdHcOif3eGItnUyBE8StgveHDqJppyfqZ0NtJaWwg/viewform" target="_blank" rel="noopener noreferrer" class="shrink-0 px-6 py-2.5 rounded-full bg-emerald-600/30 hover:bg-emerald-600 text-emerald-200 hover:text-white text-xs sm:text-sm font-bold transition-all border border-emerald-500/40 text-center">
+              Apply to Track ↗
+            </a>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6 text-sm">
+            <div>
+              <h4 class="font-bold text-gray-200 uppercase text-xs tracking-wider mb-2">Scope &amp; Problem Spaces</h4>
+              <p class="text-gray-400 leading-relaxed">Industrial warehouse robotics, agricultural UAV surveillance, sensory edge telemetry, smart grid automation, and wearable biomedical devices.</p>
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-200 uppercase text-xs tracking-wider mb-2">Evaluation Criteria</h4>
+              <p class="text-gray-400 leading-relaxed">Hardware bill-of-materials (BOM) feasibility, prototype durability, field validation, and power efficiency.</p>
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-200 uppercase text-xs tracking-wider mb-2">Track Incentives</h4>
+              <p class="text-gray-400 leading-relaxed">JIIT 128 hardware prototyping lab access, manufacturing mentors, and component procurement support.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- TRACK 5 -->
+        <div class="p-8 sm:p-10 rounded-3xl bg-gradient-to-br from-[#120824] via-[#0a0514] to-black border border-purple-500/30 hover:border-purple-400/60 transition-all shadow-xl">
+          <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-white/10">
+            <div>
+              <span class="text-xs uppercase font-extrabold tracking-widest text-amber-300 px-3 py-1 rounded-full bg-amber-500/20 border border-amber-400/30 inline-block mb-3">Track 05</span>
+              <h3 class="text-2xl sm:text-3xl font-black text-white">CleanTech, Climate &amp; AgriTech</h3>
+              <p class="text-amber-300 text-sm mt-1">Renewable Energy Systems, Carbon Accounting, Precision AgriSensors &amp; Circular Tech</p>
+            </div>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfo1yDY9sdHcOif3eGItnUyBE8StgveHDqJppyfqZ0NtJaWwg/viewform" target="_blank" rel="noopener noreferrer" class="shrink-0 px-6 py-2.5 rounded-full bg-amber-600/30 hover:bg-amber-600 text-amber-200 hover:text-white text-xs sm:text-sm font-bold transition-all border border-amber-500/40 text-center">
+              Apply to Track ↗
+            </a>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6 text-sm">
+            <div>
+              <h4 class="font-bold text-gray-200 uppercase text-xs tracking-wider mb-2">Scope &amp; Problem Spaces</h4>
+              <p class="text-gray-400 leading-relaxed">Battery management intelligence, carbon tracking ERP, solar micro-inverter monitoring, farm yield optimization, and wastewater circular recovery.</p>
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-200 uppercase text-xs tracking-wider mb-2">Evaluation Criteria</h4>
+              <p class="text-gray-400 leading-relaxed">Measurable carbon or resource impact, unit economics at scale, deployment feasibility in Indian markets.</p>
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-200 uppercase text-xs tracking-wider mb-2">Track Incentives</h4>
+              <p class="text-gray-400 leading-relaxed">Green technology grants, incubation at JIIT Sector 128, and sustainability partner fund intros.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ELIGIBILITY & TIMELINE -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20">
+      <div class="p-8 rounded-3xl bg-white/[0.03] border border-white/10">
+        <h3 class="text-xl sm:text-2xl font-bold text-white mb-4">Eligibility &amp; Team Guidelines</h3>
+        <ul class="space-y-3 text-sm text-gray-300">
+          <li class="flex items-start gap-2"><span class="text-purple-400 font-bold">•</span> Open to student innovators, collegiate teams, and early-stage startup founders across India.</li>
+          <li class="flex items-start gap-2"><span class="text-purple-400 font-bold">•</span> Team size: 1 to 5 members per startup registration.</li>
+          <li class="flex items-start gap-2"><span class="text-purple-400 font-bold">•</span> Startups must submit a pitch deck (PDF) outlining problem, solution, TAM, business model, and prototype video/link.</li>
+          <li class="flex items-start gap-2"><span class="text-purple-400 font-bold">•</span> Shortlisted top 30 finalists must attend the offline grand finale pitch on 01 Nov 2026 at JIIT Sector 128 Noida.</li>
+        </ul>
+      </div>
+
+      <div class="p-8 rounded-3xl bg-gradient-to-br from-purple-950/40 to-black border border-purple-500/30">
+        <h3 class="text-xl sm:text-2xl font-bold text-white mb-4">Key Deadlines &amp; Dates</h3>
+        <div class="space-y-4 text-sm">
+          <div class="flex items-center justify-between pb-3 border-b border-white/10">
+            <span class="text-gray-300 font-medium">Application Closes (Unstop)</span>
+            <span class="text-purple-300 font-bold">15 OCT 2026</span>
+          </div>
+          <div class="flex items-center justify-between pb-3 border-b border-white/10">
+            <span class="text-gray-300 font-medium">Cohort Shortlist Announced</span>
+            <span class="text-pink-300 font-bold">22 OCT 2026</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <span class="text-gray-300 font-medium">Grand Offline Pitching Finale</span>
+            <span class="text-white font-extrabold">01 NOV 2026</span>
+          </div>
+        </div>
+        <div class="mt-6">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfo1yDY9sdHcOif3eGItnUyBE8StgveHDqJppyfqZ0NtJaWwg/viewform" target="_blank" rel="noopener noreferrer" class="block w-full text-center py-3 rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-bold text-sm hover:from-purple-500 hover:to-indigo-500 transition-all shadow-lg">
+            Register on Unstop Today ↗
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- UNIFIED FOOTER (MATCHING REFERENCE IMAGE) -->
+<footer class="relative bg-gradient-to-b from-[#0a0418] via-[#05020a] to-[#030106] border-t border-purple-500/30 pt-16 pb-12 px-6 sm:px-10 lg:px-16 overflow-hidden group">
+  <!-- Glowing top line -->
+  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[2px] bg-gradient-to-r from-transparent via-purple-500/80 to-transparent shadow-[0_0_30px_rgba(168,85,247,0.5)]"></div>
+  <div class="absolute top-0 left-1/3 w-96 h-40 bg-purple-600/10 blur-3xl pointer-events-none"></div>
+
+  <div class="max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12 pb-14 border-b border-white/10">
+      
+      <!-- Brand & Mission Column (5 cols) -->
+      <div class="lg:col-span-5 flex flex-col justify-between space-y-6">
+        <div>
+          <a href="index.html" class="inline-flex items-center gap-3 mb-6 group">
+            <img src="innovation-logo.png" alt="Innovation Hub Logo" class="h-12 w-auto object-contain group-hover:scale-105 transition-transform">
+          </a>
+          <p class="text-gray-400 text-sm leading-relaxed max-w-sm">
+            Empowering the next generation of deep-tech innovators.
+            <br>
+            <strong class="text-white font-semibold">Join us at Ridehack 2026</strong> to shape the future of technology and entrepreneurship in India.
+          </p>
+        </div>
+
+        <!-- Social Media Icon Buttons -->
+        <div class="flex items-center gap-3 pt-2">
+          <a href="https://www.instagram.com/innovation.jiit/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="w-10 h-10 rounded-full bg-white/5 hover:bg-white/15 border border-white/10 hover:border-purple-400 text-gray-300 hover:text-white flex items-center justify-center transition-all hover:scale-110">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/innovation-jiit/posts/?feedView=all" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="w-10 h-10 rounded-full bg-white/5 hover:bg-white/15 border border-white/10 hover:border-purple-400 text-gray-300 hover:text-white flex items-center justify-center transition-all hover:scale-110">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+          </a>
+          <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter / X" class="w-10 h-10 rounded-full bg-white/5 hover:bg-white/15 border border-white/10 hover:border-purple-400 text-gray-300 hover:text-white flex items-center justify-center transition-all hover:scale-110">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="w-10 h-10 rounded-full bg-white/5 hover:bg-white/15 border border-white/10 hover:border-purple-400 text-gray-300 hover:text-white flex items-center justify-center transition-all hover:scale-110">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path><path d="m10 15 5-3-5-3z"></path></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- EXPLORE Column (2 cols) -->
+      <div class="lg:col-span-2">
+        <div class="flex items-center gap-2 mb-5">
+          <span class="w-6 h-[2px] bg-purple-500 rounded-full"></span>
+          <span class="text-xs font-black uppercase tracking-widest text-white">EXPLORE</span>
+        </div>
+        <ul class="space-y-3 text-sm">
+          <li><a href="events.html" class="text-gray-400 hover:text-white transition-colors flex items-center gap-2"><span class="text-purple-400 text-xs">•</span> Events</a></li>
+          <li><a href="sponsors.html" class="text-gray-400 hover:text-white transition-colors flex items-center gap-2"><span class="text-purple-400 text-xs">•</span> Sponsors</a></li>
+          <li><a href="team.html" class="text-gray-400 hover:text-white transition-colors flex items-center gap-2"><span class="text-purple-400 text-xs">•</span> Team</a></li>
+          <li><a href="index.html#timeline" class="text-gray-400 hover:text-white transition-colors flex items-center gap-2"><span class="text-purple-400 text-xs">•</span> Schedule</a></li>
+          <li><a href="javascript:void(0)" onclick="openComingSoonModal('Merchandise Store')" class="text-gray-400 hover:text-white transition-colors flex items-center gap-2"><span class="text-purple-400 text-xs">•</span> Merch ↗</a></li>
+        </ul>
+      </div>
+
+      <!-- LEGAL Column (2 cols) -->
+      <div class="lg:col-span-2">
+        <div class="flex items-center gap-2 mb-5">
+          <span class="w-6 h-[2px] bg-purple-500 rounded-full"></span>
+          <span class="text-xs font-black uppercase tracking-widest text-white">LEGAL</span>
+        </div>
+        <ul class="space-y-3 text-sm">
+          <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors flex items-center gap-2"><span class="text-purple-400 text-xs">•</span> Terms &amp; Conditions</a></li>
+          <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors flex items-center gap-2"><span class="text-purple-400 text-xs">•</span> Privacy Policy</a></li>
+          <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors flex items-center gap-2"><span class="text-purple-400 text-xs">•</span> Refund Policy</a></li>
+        </ul>
+      </div>
+
+      <!-- CONTACT Column (3 cols) -->
+      <div class="lg:col-span-3">
+        <div class="flex items-center gap-2 mb-5">
+          <span class="w-6 h-[2px] bg-purple-500 rounded-full"></span>
+          <span class="text-xs font-black uppercase tracking-widest text-white">CONTACT</span>
+        </div>
+        <div class="space-y-3 text-sm">
+          <p class="text-gray-400 text-xs">Get in Touch</p>
+          <p>
+            <a href="mailto:contact@innovationjiit.in" class="text-white hover:text-purple-300 font-bold transition-colors">
+              contact@innovationjiit.in
+            </a>
+          </p>
+          <div class="text-gray-400 text-xs leading-relaxed pt-2">
+            <p class="font-semibold text-gray-200">Innovation Hub, JIIT Sector 128</p>
+            <p>Jaypee Institute of Information Technology, Noida - 201304</p>
+          </div>
+          <div class="pt-2 border-t border-white/5 space-y-1">
+            <p class="text-[11px] font-bold uppercase tracking-wider text-purple-300">Call Us</p>
+            <p class="text-xs text-gray-300"><span class="font-semibold text-white">Yash:</span> <a href="tel:+917210000082" class="text-purple-400 hover:text-white transition-colors">+91 7210000082</a></p>
+            <p class="text-xs text-gray-300"><span class="font-semibold text-white">Saloni:</span> <a href="tel:+918700497761" class="text-purple-400 hover:text-white transition-colors">+91 8700497761</a></p>
+          </div>
+          <div class="pt-2">
+            <a href="https://maps.google.com/maps?q=Jaypee+Institute+of+Information+Technology+Sector+128+Noida" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs text-purple-400 hover:text-purple-300 font-semibold transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              View on Google Maps ↗
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom copyright -->
+    <div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-gray-500 text-xs sm:text-sm tracking-wide order-2 md:order-1">
+        © 2026 Ridehack • Innovation Hub, Jaypee Institute of Information Technology (JIIT Sector 128). All rights reserved.
+      </p>
+      <div class="order-1 md:order-2 flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 hover:border-purple-500/30 transition-all cursor-default text-xs sm:text-sm">
+        <span class="text-gray-400">Organized with</span>
+        <span class="text-red-500 animate-pulse text-sm">❤️</span>
+        <span class="text-gray-400">by</span>
+        <span class="text-white font-semibold">JIIT Innovation Team</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <script>
+    function toggleMobileMenu() {
+      var drawer = document.getElementById('mobileMenuDrawer');
+      if (!drawer) return;
+      drawer.style.display = (drawer.style.display === 'none' || !drawer.style.display) ? 'block' : 'none';
+    }
+  </script>
+</body>
+</html>

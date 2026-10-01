@@ -1,0 +1,10 @@
+.DS_Store
+__pycache__/
+*.bak
+_backup_current/
+generate_index.py
+insert_sections.py
+scratch_*.py
+build_full_website.py
+update_all.py
+update_navbars.py

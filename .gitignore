@@ -9,3 +9,5 @@ build_*.py
 update_all.py
 update_navbars.py
 *.txt
+apply_updates.py
+update_v2.py

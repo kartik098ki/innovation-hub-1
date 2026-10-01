@@ -55,72 +55,70 @@
 </head>
 
 <body style="">
-  <div id="root"><div class="bg-[#05020a] text-white min-h-screen font-sans selection:bg-purple-500 selection:text-white"><div class="fixed top-0 left-0 right-0 z-50 hidden md:flex justify-center pt-5 pointer-events-none px-4">
-  <div class="pointer-events-auto rounded-full flex items-center overflow-hidden transition-all duration-300" style="box-shadow: rgba(0, 0, 0, 0.4) 0px 8px 32px -8px; border: 1px solid rgba(255, 255, 255, 0.12); background-color: rgba(5,2,10,0.92); backdrop-filter: blur(24px); padding: 8px 24px; height: 64px; min-height: 64px; max-height: 64px; width: min(95%, 1120px);">
-    <div class="flex items-center justify-between w-full px-2">
-      <!-- LOGO: Fades/slides in on scroll -->
-      <div id="navbarLogo" class="shrink-0 flex items-center transition-all duration-300 opacity-0 -translate-y-2 pointer-events-none">
+  <div id="root"><div class="bg-[#05020a] text-white min-h-screen font-sans selection:bg-purple-500 selection:text-white">
+  <!-- UNIFIED DYNAMIC FLOATING NAVBAR -->
+  <div class="fixed top-0 left-0 right-0 z-50 hidden md:flex justify-center pt-5 pointer-events-none px-4">
+    <div id="desktopNavbarPanel" class="pointer-events-auto rounded-full flex items-center justify-between transition-all duration-500 ease-out" style="box-shadow: rgba(0, 0, 0, 0.45) 0px 8px 32px -8px; border: 1px solid rgba(255, 255, 255, 0.12); background-color: rgba(5,2,10,0.92); backdrop-filter: blur(24px); padding: 8px 24px; height: 64px; width: min(95%, 880px);">
+      
+      <!-- LOGO: ALWAYS VISIBLE -->
+      <div id="navbarLogo" class="shrink-0 flex items-center transition-all duration-300">
         <a class="flex items-center cursor-pointer group" href="index.html">
-          <img alt="Innovation Hub Logo" class="h-10 w-auto object-contain group-hover:scale-105 transition-transform" src="innovation-logo.png">
+          <img alt="Innovation Hub Logo" class="h-9 w-auto object-contain group-hover:scale-105 transition-transform" src="innovation-logo.png">
         </a>
       </div>
-      <!-- NAV LINKS: Spacious & elegant -->
-      <div id="navbarLinks" class="flex items-center justify-center gap-3 lg:gap-6 mx-auto transition-all duration-300 opacity-100 pointer-events-auto overflow-hidden">
-        <a href="index.html" class="px-3 py-1.5 text-xs sm:text-sm font-medium transition-colors rounded-full whitespace-nowrap text-white bg-white/10">Home</a>
-        <a href="#about" class="px-3 py-1.5 text-xs sm:text-sm font-medium transition-colors rounded-full whitespace-nowrap text-gray-300 hover:text-white hover:bg-white/5">About</a>
-        <a href="events.html" class="px-3 py-1.5 text-xs sm:text-sm font-medium transition-colors rounded-full whitespace-nowrap text-gray-300 hover:text-white hover:bg-white/5">Domains</a>
-        <a href="sponsors.html" class="px-3 py-1.5 text-xs sm:text-sm font-medium transition-colors rounded-full whitespace-nowrap text-gray-300 hover:text-white hover:bg-white/5">Grants</a>
-        <a href="team.html" class="px-3 py-1.5 text-xs sm:text-sm font-medium transition-colors rounded-full whitespace-nowrap text-gray-300 hover:text-white hover:bg-white/5">Team</a>
-        <a href="javascript:void(0)" onclick="openComingSoonModal('Speaker Registrations')" class="px-3 py-1.5 text-xs sm:text-sm font-medium transition-colors rounded-full whitespace-nowrap text-gray-300 hover:text-white hover:bg-white/5">Speakers</a>
-        <a href="contact.html" class="px-3 py-1.5 text-xs sm:text-sm font-medium transition-colors rounded-full whitespace-nowrap text-gray-300 hover:text-white hover:bg-white/5">Contact</a>
+
+      <!-- SPACIOUS NAV LINKS (Clean 5 links: Home, Grants, Team, Speakers, Contact) -->
+      <div id="navbarLinks" class="flex items-center justify-center gap-3 lg:gap-5 mx-auto transition-all duration-500 ease-out overflow-hidden" style="max-width: 480px; opacity: 1;">
+        <a href="index.html" class="px-3.5 py-1.5 text-xs sm:text-sm font-medium transition-colors rounded-full whitespace-nowrap text-gray-300 hover:text-white hover:bg-white/5">Home</a>
+        <a href="sponsors.html" class="px-3.5 py-1.5 text-xs sm:text-sm font-medium transition-colors rounded-full whitespace-nowrap text-gray-300 hover:text-white hover:bg-white/5">Grants</a>
+        <a href="team.html" class="px-3.5 py-1.5 text-xs sm:text-sm font-medium transition-colors rounded-full whitespace-nowrap text-gray-300 hover:text-white hover:bg-white/5">Team</a>
+        <a href="javascript:void(0)" onclick="openComingSoonModal('Speaker Registrations')" class="px-3.5 py-1.5 text-xs sm:text-sm font-medium transition-colors rounded-full whitespace-nowrap text-gray-300 hover:text-white hover:bg-white/5">Speakers</a>
+        <a href="contact.html" class="px-3.5 py-1.5 text-xs sm:text-sm font-medium transition-colors rounded-full whitespace-nowrap text-gray-300 hover:text-white hover:bg-white/5">Contact</a>
       </div>
-      <!-- REGISTER BUTTON: Slides in on scroll -->
-      <div id="navbarRegister" class="shrink-0 flex items-center transition-all duration-300 opacity-0 -translate-y-2 pointer-events-none">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfo1yDY9sdHcOif3eGItnUyBE8StgveHDqJppyfqZ0NtJaWwg/viewform" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white rounded-full text-sm font-extrabold tracking-wide transition-all shadow-[0_0_20px_rgba(168,85,247,0.5)] hover:scale-105">
+
+      <!-- REGISTER BUTTON: ALWAYS VISIBLE -->
+      <div id="navbarRegister" class="shrink-0 flex items-center transition-all duration-300">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfo1yDY9sdHcOif3eGItnUyBE8StgveHDqJppyfqZ0NtJaWwg/viewform" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white rounded-full text-xs sm:text-sm font-extrabold tracking-wide transition-all shadow-[0_0_20px_rgba(168,85,247,0.5)] hover:scale-105 whitespace-nowrap">
           <span>Register</span>
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
         </a>
       </div>
+
     </div>
   </div>
-</div>
-<div class="fixed top-0 left-0 right-0 z-50 md:hidden">
-  <div class="flex items-center justify-between px-4 py-3 bg-[#05020a]/95 backdrop-blur-md border-b border-white/10">
-    <a class="flex items-center" href="index.html">
-      <img alt="Innovation Hub Logo" class="h-8 w-auto object-contain" src="innovation-logo.png">
-    </a>
-    <div class="flex items-center gap-3">
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfo1yDY9sdHcOif3eGItnUyBE8StgveHDqJppyfqZ0NtJaWwg/viewform" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-full text-xs font-bold shadow-[0_0_12px_rgba(168,85,247,0.4)]">
-        Register
+
+  <!-- MOBILE TOP BAR -->
+  <div class="fixed top-0 left-0 right-0 z-50 md:hidden">
+    <div class="flex items-center justify-between px-4 py-3 bg-[#05020a]/95 backdrop-blur-md border-b border-white/10">
+      <a class="flex items-center" href="index.html">
+        <img alt="Innovation Hub Logo" class="h-8 w-auto object-contain" src="innovation-logo.png">
       </a>
-      <button id="mobileMenuBtn" onclick="toggleMobileMenu()" aria-label="Toggle mobile menu" class="w-9 h-9 flex items-center justify-center rounded-lg bg-white/5 border border-white/10 text-white hover:bg-white/10 transition-colors">
-        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
-      </button>
+      <div class="flex items-center gap-3">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfo1yDY9sdHcOif3eGItnUyBE8StgveHDqJppyfqZ0NtJaWwg/viewform" target="_blank" rel="noopener noreferrer" class="px-4 py-1.5 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-full text-xs font-bold shadow-[0_0_12px_rgba(168,85,247,0.4)]">
+          Register
+        </a>
+        <button id="mobileMenuBtn" onclick="toggleMobileMenu()" aria-label="Toggle mobile menu" class="w-9 h-9 flex items-center justify-center rounded-lg bg-white/5 border border-white/10 text-white hover:bg-white/10 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
+        </button>
+      </div>
     </div>
   </div>
-</div>
-<div id="mobileMenuDrawer" style="display:none; position:fixed; top:58px; left:0; right:0; background:rgba(5,2,10,0.98); backdrop-filter:blur(24px); border-bottom:1px solid rgba(255,255,255,0.1); padding:24px 20px; z-index:9999;">
-  <div style="display:flex; flex-direction:column; gap:16px; align-items:center;">
-    <a href="index.html" onclick="toggleMobileMenu()" style="color:white; font-size:16px; font-weight:600; text-decoration:none;">Home</a>
-    <a href="#about" onclick="toggleMobileMenu()" style="color:#d1d5db; font-size:16px; font-weight:500; text-decoration:none;">About</a>
-    <a href="events.html" onclick="toggleMobileMenu()" style="color:#d1d5db; font-size:16px; font-weight:500; text-decoration:none;">Domains</a>
-    <a href="sponsors.html" onclick="toggleMobileMenu()" style="color:#d1d5db; font-size:16px; font-weight:500; text-decoration:none;">Grants</a>
-    <a href="team.html" onclick="toggleMobileMenu()" style="color:#d1d5db; font-size:16px; font-weight:500; text-decoration:none;">Team</a>
-    <a href="javascript:void(0)" onclick="toggleMobileMenu(); openComingSoonModal('Speaker Registrations');" style="color:#d1d5db; font-size:16px; font-weight:500; text-decoration:none;">Speakers</a>
-    <a href="contact.html" onclick="toggleMobileMenu()" style="color:#d1d5db; font-size:16px; font-weight:500; text-decoration:none;">Contact</a>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfo1yDY9sdHcOif3eGItnUyBE8StgveHDqJppyfqZ0NtJaWwg/viewform" target="_blank" rel="noopener noreferrer" style="margin-top:6px; background:linear-gradient(to right, #9333ea, #4f46e5); color:white; font-size:14px; font-weight:700; text-decoration:none; padding:10px 28px; border-radius:9999px; display:inline-flex; align-items:center; gap:8px;">
-      <span>Register</span>
-      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-    </a>
+
+  <!-- MOBILE MENU DRAWER -->
+  <div id="mobileMenuDrawer" style="display:none; position:fixed; top:58px; left:0; right:0; background:rgba(5,2,10,0.98); backdrop-filter:blur(24px); border-bottom:1px solid rgba(255,255,255,0.1); padding:24px 20px; z-index:9999;">
+    <div style="display:flex; flex-direction:column; gap:16px; align-items:center;">
+      <a href="index.html" onclick="toggleMobileMenu()" style="color:white; font-size:16px; font-weight:600; text-decoration:none;">Home</a>
+      <a href="sponsors.html" onclick="toggleMobileMenu()" style="color:#d1d5db; font-size:16px; font-weight:500; text-decoration:none;">Grants</a>
+      <a href="team.html" onclick="toggleMobileMenu()" style="color:#d1d5db; font-size:16px; font-weight:500; text-decoration:none;">Team</a>
+      <a href="javascript:void(0)" onclick="toggleMobileMenu(); openComingSoonModal('Speaker Registrations');" style="color:#d1d5db; font-size:16px; font-weight:500; text-decoration:none;">Speakers</a>
+      <a href="contact.html" onclick="toggleMobileMenu()" style="color:#d1d5db; font-size:16px; font-weight:500; text-decoration:none;">Contact</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfo1yDY9sdHcOif3eGItnUyBE8StgveHDqJppyfqZ0NtJaWwg/viewform" target="_blank" rel="noopener noreferrer" style="margin-top:6px; background:linear-gradient(to right, #9333ea, #4f46e5); color:white; font-size:14px; font-weight:700; text-decoration:none; padding:10px 28px; border-radius:9999px; display:inline-flex; align-items:center; gap:8px;">
+        <span>Register</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+      </a>
+    </div>
   </div>
-</div>
-<script>
-function toggleMobileMenu() {
-  var drawer = document.getElementById('mobileMenuDrawer');
-  if (!drawer) return;
-  drawer.style.display = (drawer.style.display === 'none' || !drawer.style.display) ? 'block' : 'none';
-}
-</script>
+
 <main class="relative z-0">
   <div style="opacity: 1; filter: blur(0px);">
     <div class="overflow-x-hidden">
@@ -163,13 +161,7 @@ function toggleMobileMenu() {
               <img alt="RIDEHACK 2026" class="w-[240px] sm:w-[340px] md:w-[460px] lg:w-[540px] h-auto object-contain mx-auto" src="ridehack-logo.jpg">
             </div>
 
-            <!-- EVENT DATE & VENUE PILL -->
-            <div class="flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 mb-5 sm:mb-6">
-              <span class="w-2 h-2 rounded-full bg-purple-400 animate-pulse"></span>
-              <span class="text-xs sm:text-sm font-bold tracking-wider text-purple-200 uppercase">
-                01 NOV 2026 • JIIT SECTOR 128 NOIDA
-              </span>
-            </div>
+            
 
             <!-- COMPACT & GLOWING 1 CRORE PRIZE POOL HERO HIGHLIGHT -->
             <div class="flex flex-col items-center mb-6 sm:mb-8">
@@ -186,14 +178,9 @@ function toggleMobileMenu() {
 
             <!-- HERO ACTION BUTTONS -->
             <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-5">
-              <a class="group relative flex items-center justify-center gap-2 px-7 py-3.5 sm:px-9 sm:py-4 rounded-full overflow-hidden transition-all duration-300 hover:scale-105 shadow-[0_0_30px_rgba(168,85,247,0.5)]" href="https://docs.google.com/forms/d/e/1FAIpQLSfo1yDY9sdHcOif3eGItnUyBE8StgveHDqJppyfqZ0NtJaWwg/viewform" target="_blank" rel="noopener noreferrer">
-                <div class="absolute inset-0 overflow-hidden rounded-full">
-                  <div class="absolute inset-[-50%] bg-[conic-gradient(from_0deg,transparent_0_240deg,#7c3aed_280deg,#a855f7_320deg,#c084fc_360deg)] animate-[spin_2s_linear_infinite] opacity-100 transition-opacity duration-300"></div>
-                </div>
-                <div class="absolute inset-[2px] bg-black/90 backdrop-blur-md rounded-full"></div>
-                <div class="absolute inset-0 rounded-full border border-white/20 group-hover:border-transparent transition-colors duration-300"></div>
-                <span class="relative z-10 text-sm sm:text-base font-extrabold text-white tracking-wide">Register</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="relative z-10 text-white group-hover:translate-x-1 transition-transform" aria-hidden="true">
+              <a class="flex items-center justify-center gap-2.5 px-8 py-4 sm:px-10 sm:py-4.5 rounded-full bg-gradient-to-r from-purple-600 via-purple-500 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-extrabold text-base sm:text-lg transition-all duration-300 shadow-[0_0_35px_rgba(168,85,247,0.6)] hover:shadow-[0_0_50px_rgba(168,85,247,0.9)] hover:scale-105 cursor-pointer" href="https://docs.google.com/forms/d/e/1FAIpQLSfo1yDY9sdHcOif3eGItnUyBE8StgveHDqJppyfqZ0NtJaWwg/viewform" target="_blank" rel="noopener noreferrer">
+                <span>Register Now</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M5 12h14"></path>
                   <path d="m12 5 7 7-7 7"></path>
                 </svg>
@@ -1091,147 +1078,153 @@ function toggleMobileMenu() {
           </div>
         </div>
       </section>
-      <section id="sponsors-preview">
-        <div class="px-4 sm:px-6 md:px-12 lg:px-20 pt-20 sm:pt-24 pb-16 sm:pb-20  bg-[#05020a]">
+            <section id="sponsors-preview">
+        <div class="px-4 sm:px-6 md:px-12 lg:px-20 pt-20 sm:pt-24 pb-16 sm:pb-20 bg-[#05020a]">
           <div>
             <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 text-center tracking-tight">
               Interested in Joining 
-              <span class="text-gray-400">RIDEHACK 2026?</span>
+              <span class="text-purple-400">RIDEHACK 2026?</span>
             </h2>
-            <p class="text-gray-500 text-center mb-10 max-w-2xl mx-auto">Choose how you'd like to be part of JIIT's premier startup pitching event</p>
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-              <div class="bg-white/5 border border-white/10 rounded-2xl p-6 sm:p-8 hover:border-purple-500/50 transition-all duration-300 group h-full flex flex-col">
-                <div class="flex items-start gap-4 flex-1">
-                  <div class="p-3 bg-purple-500/20 rounded-xl text-purple-400 group-hover:bg-purple-500/30 transition-colors shrink-0">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users" aria-hidden="true">
-                      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
-                      <path d="M16 3.128a4 4 0 0 1 0 7.744"></path>
-                      <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
-                      <circle cx="9" cy="7" r="4"></circle>
-                    </svg>
+            <p class="text-gray-400 text-center mb-12 max-w-2xl mx-auto text-sm sm:text-base">Choose your pathway to be part of JIIT's premier innovation &amp; startup pitching summit</p>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+              
+              <!-- CARD 1: Startups & Founders -->
+              <div class="bg-[#0b0517] border border-white/10 hover:border-purple-500/50 rounded-3xl p-8 hover:-translate-y-1.5 transition-all duration-300 group flex flex-col justify-between shadow-xl">
+                <div>
+                  <div class="w-14 h-14 rounded-2xl bg-purple-500/15 border border-purple-500/30 flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">
+                    🚀
                   </div>
-                  <div class="flex-1 flex flex-col h-full">
-                    <h3 class="text-xl font-bold text-white mb-2">Startups &amp; Founders</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-4 flex-1">Pitch for funding, non-dilutive grants, and direct VC connect at Ridehack 2026 to accelerate your venture.</p>
-                    <button onclick="openComingSoonModal('Pitch for Grants &amp; Funding')" class="inline-flex items-center px-6 py-2.5 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 rounded-full text-sm font-semibold text-white transition-all duration-300 w-fit cursor-pointer shadow-[0_0_15px_rgba(168,85,247,0.3)]">Pitch for Grants &amp; Funding ↗</button>
-                  </div>
+                  <h3 class="text-2xl font-bold text-white mb-3 tracking-tight">Startups &amp; Founders</h3>
+                  <p class="text-gray-300 text-sm sm:text-base leading-relaxed mb-8">
+                    Pitch for funding, non-dilutive grants, and direct VC connect at Ridehack 2026 to accelerate your venture.
+                  </p>
+                </div>
+                <div>
+                  <a href="events.html" class="inline-flex items-center justify-center w-full py-3.5 px-6 rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold text-sm transition-all shadow-[0_0_20px_rgba(168,85,247,0.4)] text-center">
+                    Explore Pitch Tracks &amp; Apply ↗
+                  </a>
                 </div>
               </div>
-              <div class="bg-white/5 border border-white/10 rounded-2xl p-6 sm:p-8 hover:border-purple-500/50 transition-all duration-300 group h-full flex flex-col">
-                <div class="flex items-start gap-4 flex-1">
-                  <div class="p-3 bg-purple-500/20 rounded-xl text-purple-400 group-hover:bg-purple-500/30 transition-colors shrink-0">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-store" aria-hidden="true">
-                      <path d="M15 21v-5a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v5"></path>
-                      <path d="M17.774 10.31a1.12 1.12 0 0 0-1.549 0 2.5 2.5 0 0 1-3.451 0 1.12 1.12 0 0 0-1.548 0 2.5 2.5 0 0 1-3.452 0 1.12 1.12 0 0 0-1.549 0 2.5 2.5 0 0 1-3.77-3.248l2.889-4.184A2 2 0 0 1 7 2h10a2 2 0 0 1 1.653.873l2.895 4.192a2.5 2.5 0 0 1-3.774 3.244"></path>
-                      <path d="M4 10.95V19a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8.05"></path>
-                    </svg>
+
+              <!-- CARD 2: Investors & Business Experts -->
+              <div class="bg-[#0b0517] border border-white/10 hover:border-pink-500/50 rounded-3xl p-8 hover:-translate-y-1.5 transition-all duration-300 group flex flex-col justify-between shadow-xl">
+                <div>
+                  <div class="w-14 h-14 rounded-2xl bg-pink-500/15 border border-pink-500/30 flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">
+                    💼
                   </div>
-                  <div class="flex-1 flex flex-col h-full">
-                    <h3 class="text-xl font-bold text-white mb-2">Investors &amp; Business Experts</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-4 flex-1">Discover high-potential early-stage startups, mentor visionary founders, and co-invest alongside venture leaders.</p>
-                    <button onclick="openComingSoonModal('Connect to Invest')" class="inline-flex items-center px-6 py-2.5 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 rounded-full text-sm font-semibold text-white transition-all duration-300 w-fit cursor-pointer shadow-[0_0_15px_rgba(168,85,247,0.3)]">Connect to Invest ↗</button>
-                  </div>
+                  <h3 class="text-2xl font-bold text-white mb-3 tracking-tight">Investors &amp; Business Experts</h3>
+                  <p class="text-gray-300 text-sm sm:text-base leading-relaxed mb-8">
+                    Discover high-potential early-stage startups, mentor visionary founders, and co-invest alongside venture leaders.
+                  </p>
+                </div>
+                <div>
+                  <button onclick="openComingSoonModal('Investor &amp; VC Connect', 'Investor registrations and VIP demo day passes are opening shortly. For early syndicate access, contact us at contact@innovationjiit.in.')" class="w-full py-3.5 px-6 rounded-full bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-500 hover:to-purple-500 text-white font-bold text-sm transition-all shadow-[0_0_20px_rgba(236,72,153,0.35)] cursor-pointer text-center">
+                    Connect as Investor ↗
+                  </button>
                 </div>
               </div>
-              <div class="bg-white/5 border border-white/10 rounded-2xl p-6 sm:p-8 hover:border-purple-500/50 transition-all duration-300 group h-full flex flex-col">
-                <div class="flex items-start gap-4 flex-1">
-                  <div class="p-3 bg-purple-500/20 rounded-xl text-purple-400 group-hover:bg-purple-500/30 transition-colors shrink-0">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-handshake" aria-hidden="true">
-                      <path d="m11 17 2 2a1 1 0 1 0 3-3"></path>
-                      <path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"></path>
-                      <path d="m21 3 1 11h-2"></path>
-                      <path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"></path>
-                      <path d="M3 4h8"></path>
-                    </svg>
+
+              <!-- CARD 3: Grant Partners / Ecosystem Partners -->
+              <div class="bg-[#0b0517] border border-white/10 hover:border-purple-500/50 rounded-3xl p-8 hover:-translate-y-1.5 transition-all duration-300 group flex flex-col justify-between shadow-xl">
+                <div>
+                  <div class="w-14 h-14 rounded-2xl bg-purple-500/15 border border-purple-500/30 flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">
+                    🤝
                   </div>
-                  <div class="flex-1 flex flex-col h-full">
-                    <h3 class="text-xl font-bold text-white mb-2">Grant Partners / Ecosystem Partners</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-4 flex-1">Offer grants, technical resources, cloud credits, and ecosystem support to empower student and early-stage founders.</p>
-                    <button onclick="openComingSoonModal('Partner with Grants')" class="inline-flex items-center px-6 py-2.5 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 rounded-full text-sm font-semibold text-white transition-all duration-300 w-fit cursor-pointer shadow-[0_0_15px_rgba(168,85,247,0.3)]">Partner with Grants ↗</button>
-                  </div>
+                  <h3 class="text-2xl font-bold text-white mb-3 tracking-tight">Grant Partners / Ecosystem Partners</h3>
+                  <p class="text-gray-300 text-sm sm:text-base leading-relaxed mb-8">
+                    Offer grants, technical resources, cloud credits, and ecosystem support to empower student and early-stage founders.
+                  </p>
+                </div>
+                <div>
+                  <a href="sponsors.html" class="inline-flex items-center justify-center w-full py-3.5 px-6 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white font-bold text-sm transition-all shadow-[0_0_20px_rgba(99,102,241,0.35)] text-center">
+                    Partner with Grants ↗
+                  </a>
                 </div>
               </div>
+
             </div>
           </div>
         </div>
       </section>
-      <!-- UNIFIED FOOTER (MATCHING REFERENCE IMAGE) -->
-<footer class="relative bg-gradient-to-b from-[#0a0418] via-[#05020a] to-[#030106] border-t border-purple-500/30 pt-16 pb-12 px-6 sm:px-10 lg:px-16 overflow-hidden group">
-  <!-- Glowing top line -->
-  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[2px] bg-gradient-to-r from-transparent via-purple-500/80 to-transparent shadow-[0_0_30px_rgba(168,85,247,0.5)]"></div>
-  <div class="absolute top-0 left-1/3 w-96 h-40 bg-purple-600/10 blur-3xl pointer-events-none"></div>
+      <!-- UNIFIED FOOTER (MATCHING USER REFERENCE IMAGE media_1790823090143.png) -->
+<footer class="relative bg-gradient-to-b from-[#0a0316] via-[#05010a] to-[#020005] border-t border-purple-500/30 pt-20 pb-12 px-6 sm:px-10 lg:px-16 overflow-hidden group">
+  <!-- Glowing top purple line with ambient reflection -->
+  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[2px] bg-gradient-to-r from-transparent via-purple-500/90 to-transparent shadow-[0_0_30px_rgba(168,85,247,0.7)]"></div>
+  <div class="absolute top-0 left-1/3 w-[500px] h-48 bg-purple-600/10 blur-3xl pointer-events-none"></div>
 
   <div class="max-w-7xl mx-auto">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12 pb-14 border-b border-white/10">
+    <!-- Huge generous column spacing matching reference screenshot -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-14 xl:gap-20 pb-16">
       
       <!-- Brand & Mission Column (5 cols) -->
-      <div class="lg:col-span-5 flex flex-col justify-between space-y-6">
+      <div class="lg:col-span-5 flex flex-col justify-between space-y-8">
         <div>
           <a href="index.html" class="inline-flex items-center gap-3 mb-6 group">
             <img src="innovation-logo.png" alt="Innovation Hub Logo" class="h-12 w-auto object-contain group-hover:scale-105 transition-transform">
           </a>
           <p class="text-gray-400 text-sm leading-relaxed max-w-sm">
             Empowering the next generation of deep-tech innovators.
-            <br>
+            <br class="hidden sm:block">
             <strong class="text-white font-semibold">Join us at Ridehack 2026</strong> to shape the future of technology and entrepreneurship in India.
           </p>
         </div>
 
         <!-- Social Media Icon Buttons -->
         <div class="flex items-center gap-3 pt-2">
-          <a href="https://www.instagram.com/innovation.jiit/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="w-10 h-10 rounded-full bg-white/5 hover:bg-white/15 border border-white/10 hover:border-purple-400 text-gray-300 hover:text-white flex items-center justify-center transition-all hover:scale-110">
+          <a href="https://www.instagram.com/innovation.jiit/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="w-10 h-10 rounded-full bg-white/[0.04] hover:bg-purple-600/20 border border-white/10 hover:border-purple-400/50 text-gray-400 hover:text-white flex items-center justify-center transition-all hover:scale-110">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
           </a>
-          <a href="https://www.linkedin.com/company/innovation-jiit/posts/?feedView=all" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="w-10 h-10 rounded-full bg-white/5 hover:bg-white/15 border border-white/10 hover:border-purple-400 text-gray-300 hover:text-white flex items-center justify-center transition-all hover:scale-110">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+          <a href="https://www.linkedin.com/company/innovation-jiit/posts/?feedView=all" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="w-10 h-10 rounded-full bg-white/[0.04] hover:bg-purple-600/20 border border-white/10 hover:border-purple-400/50 text-gray-400 hover:text-white flex items-center justify-center transition-all hover:scale-110">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
           </a>
-          <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter / X" class="w-10 h-10 rounded-full bg-white/5 hover:bg-white/15 border border-white/10 hover:border-purple-400 text-gray-300 hover:text-white flex items-center justify-center transition-all hover:scale-110">
+          <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter / X" class="w-10 h-10 rounded-full bg-white/[0.04] hover:bg-purple-600/20 border border-white/10 hover:border-purple-400/50 text-gray-400 hover:text-white flex items-center justify-center transition-all hover:scale-110">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
           </a>
-          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="w-10 h-10 rounded-full bg-white/5 hover:bg-white/15 border border-white/10 hover:border-purple-400 text-gray-300 hover:text-white flex items-center justify-center transition-all hover:scale-110">
+          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="w-10 h-10 rounded-full bg-white/[0.04] hover:bg-purple-600/20 border border-white/10 hover:border-purple-400/50 text-gray-400 hover:text-white flex items-center justify-center transition-all hover:scale-110">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path><path d="m10 15 5-3-5-3z"></path></svg>
           </a>
         </div>
       </div>
 
-      <!-- EXPLORE Column (2 cols) -->
+      <!-- EXPLORE Column (2 cols) - NO BULLET POINTS -->
       <div class="lg:col-span-2">
-        <div class="flex items-center gap-2 mb-5">
+        <div class="flex items-center gap-2.5 mb-6">
           <span class="w-6 h-[2px] bg-purple-500 rounded-full"></span>
           <span class="text-xs font-black uppercase tracking-widest text-white">EXPLORE</span>
         </div>
-        <ul class="space-y-3 text-sm">
-          <li><a href="events.html" class="text-gray-400 hover:text-white transition-colors flex items-center gap-2"><span class="text-purple-400 text-xs">•</span> Events</a></li>
-          <li><a href="sponsors.html" class="text-gray-400 hover:text-white transition-colors flex items-center gap-2"><span class="text-purple-400 text-xs">•</span> Sponsors</a></li>
-          <li><a href="team.html" class="text-gray-400 hover:text-white transition-colors flex items-center gap-2"><span class="text-purple-400 text-xs">•</span> Team</a></li>
-          <li><a href="index.html#timeline" class="text-gray-400 hover:text-white transition-colors flex items-center gap-2"><span class="text-purple-400 text-xs">•</span> Schedule</a></li>
-          <li><a href="javascript:void(0)" onclick="openComingSoonModal('Merchandise Store')" class="text-gray-400 hover:text-white transition-colors flex items-center gap-2"><span class="text-purple-400 text-xs">•</span> Merch ↗</a></li>
+        <ul class="space-y-4 text-sm">
+          <li><a href="events.html" class="text-gray-400 hover:text-white transition-colors block">Events</a></li>
+          <li><a href="sponsors.html" class="text-gray-400 hover:text-white transition-colors block">Sponsors</a></li>
+          <li><a href="team.html" class="text-gray-400 hover:text-white transition-colors block">Team</a></li>
+          <li><a href="index.html#timeline" class="text-gray-400 hover:text-white transition-colors block">Schedule</a></li>
+          <li><a href="javascript:void(0)" onclick="openComingSoonModal('Merchandise Store')" class="text-gray-400 hover:text-white transition-colors block">Merch ↗</a></li>
         </ul>
       </div>
 
-      <!-- LEGAL Column (2 cols) -->
+      <!-- LEGAL Column (2 cols) - NO BULLET POINTS -->
       <div class="lg:col-span-2">
-        <div class="flex items-center gap-2 mb-5">
+        <div class="flex items-center gap-2.5 mb-6">
           <span class="w-6 h-[2px] bg-purple-500 rounded-full"></span>
           <span class="text-xs font-black uppercase tracking-widest text-white">LEGAL</span>
         </div>
-        <ul class="space-y-3 text-sm">
-          <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors flex items-center gap-2"><span class="text-purple-400 text-xs">•</span> Terms &amp; Conditions</a></li>
-          <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors flex items-center gap-2"><span class="text-purple-400 text-xs">•</span> Privacy Policy</a></li>
-          <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors flex items-center gap-2"><span class="text-purple-400 text-xs">•</span> Refund Policy</a></li>
+        <ul class="space-y-4 text-sm">
+          <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors block">Terms &amp; Conditions</a></li>
+          <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors block">Privacy Policy</a></li>
+          <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors block">Refund Policy</a></li>
         </ul>
       </div>
 
       <!-- CONTACT Column (3 cols) -->
       <div class="lg:col-span-3">
-        <div class="flex items-center gap-2 mb-5">
+        <div class="flex items-center gap-2.5 mb-6">
           <span class="w-6 h-[2px] bg-purple-500 rounded-full"></span>
           <span class="text-xs font-black uppercase tracking-widest text-white">CONTACT</span>
         </div>
-        <div class="space-y-3 text-sm">
+        <div class="space-y-3.5 text-sm">
           <p class="text-gray-400 text-xs">Get in Touch</p>
           <p>
-            <a href="mailto:contact@innovationjiit.in" class="text-white hover:text-purple-300 font-bold transition-colors">
+            <a href="mailto:contact@innovationjiit.in" class="text-white hover:text-purple-300 font-bold text-base transition-colors block">
               contact@innovationjiit.in
             </a>
           </p>
@@ -1256,11 +1249,11 @@ function toggleMobileMenu() {
     </div>
 
     <!-- Bottom copyright -->
-    <div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+    <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
       <p class="text-gray-500 text-xs sm:text-sm tracking-wide order-2 md:order-1">
         © 2026 Ridehack • Innovation Hub, Jaypee Institute of Information Technology (JIIT Sector 128). All rights reserved.
       </p>
-      <div class="order-1 md:order-2 flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 hover:border-purple-500/30 transition-all cursor-default text-xs sm:text-sm">
+      <div class="order-1 md:order-2 flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.04] border border-white/10 text-xs sm:text-sm">
         <span class="text-gray-400">Organized with</span>
         <span class="text-red-500 animate-pulse text-sm">❤️</span>
         <span class="text-gray-400">by</span>
@@ -1291,25 +1284,56 @@ function toggleMobileMenu() {
       }
     }
 
-    // Scroll listener: Logo and Register button appear in navbar on scroll down
-    var navbarLogo = document.getElementById('navbarLogo');
-    var navbarRegister = document.getElementById('navbarRegister');
-    function updateNavbarOnScroll() {
-      if (!navbarLogo || !navbarRegister) return;
-      if (window.scrollY > 60) {
-        navbarLogo.classList.remove('opacity-0', '-translate-y-2', 'pointer-events-none');
-        navbarLogo.classList.add('opacity-100', 'translate-y-0', 'pointer-events-auto');
-        navbarRegister.classList.remove('opacity-0', '-translate-y-2', 'pointer-events-none');
-        navbarRegister.classList.add('opacity-100', 'translate-y-0', 'pointer-events-auto');
+  });
+</script>
+<script>
+  function toggleMobileMenu() {
+    var drawer = document.getElementById('mobileMenuDrawer');
+    if (!drawer) return;
+    drawer.style.display = (drawer.style.display === 'none' || !drawer.style.display) ? 'block' : 'none';
+  }
+
+  // Dynamic navbar: Logo & Register button always visible.
+  // On scroll down: Logo and Register button smoothly come close together in a compact pill!
+  // On scroll up: Expands back to full pill with all links!
+  function initNavbarScroll() {
+    var panel = document.getElementById('desktopNavbarPanel');
+    var links = document.getElementById('navbarLinks');
+    if (!panel || !links) return;
+
+    var isCompact = false;
+    function onScroll() {
+      if (window.scrollY > 40) {
+        if (!isCompact) {
+          isCompact = true;
+          panel.style.width = '290px';
+          panel.style.padding = '8px 18px';
+          links.style.maxWidth = '0px';
+          links.style.opacity = '0';
+          links.style.pointerEvents = 'none';
+          links.style.margin = '0';
+        }
       } else {
-        navbarLogo.classList.add('opacity-0', '-translate-y-2', 'pointer-events-none');
-        navbarLogo.classList.remove('opacity-100', 'translate-y-0', 'pointer-events-auto');
-        navbarRegister.classList.add('opacity-0', '-translate-y-2', 'pointer-events-none');
-        navbarRegister.classList.remove('opacity-100', 'translate-y-0', 'pointer-events-auto');
+        if (isCompact) {
+          isCompact = false;
+          panel.style.width = 'min(95%, 880px)';
+          panel.style.padding = '8px 24px';
+          links.style.maxWidth = '480px';
+          links.style.opacity = '1';
+          links.style.pointerEvents = 'auto';
+          links.style.margin = '0 auto';
+        }
       }
     }
-    window.addEventListener('scroll', updateNavbarOnScroll, { passive: true });
-    updateNavbarOnScroll();
-  });
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initNavbarScroll);
+  } else {
+    initNavbarScroll();
+  }
 </script>
 </body></html>

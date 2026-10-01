@@ -9,14 +9,14 @@ function openComingSoonModal(title, description) {
   var modalDesc = description || 'Application & registration portals for ' + modalTitle + ' are launching shortly for RIDE Hack 2026. Stay tuned!';
 
   var modalHtml = `
-    <div id="comingSoonModal" class="fixed inset-0 z-[99999] flex items-center justify-center p-4 bg-black/80 backdrop-blur-md transition-all duration-300 animate-fadeIn">
-      <div class="relative w-full max-w-lg rounded-3xl bg-gradient-to-b from-[#180a30] via-[#0d061a] to-[#05020a] border border-purple-500/50 p-8 sm:p-10 shadow-[0_0_60px_rgba(168,85,247,0.45)] text-center overflow-hidden">
+    <div id="comingSoonModal" onclick="if(event.target === this) closeComingSoonModal()" class="fixed inset-0 z-[99999] flex items-center justify-center p-4 bg-black/80 backdrop-blur-md transition-all duration-300">
+      <div class="relative w-full max-w-lg rounded-3xl bg-gradient-to-b from-[#180a30] via-[#0d061a] to-[#05020a] border border-purple-500/50 p-8 sm:p-10 shadow-[0_0_60px_rgba(168,85,247,0.45)] text-center overflow-hidden" onclick="event.stopPropagation()">
         <!-- Ambient purple glow -->
         <div class="absolute -top-20 -left-20 w-48 h-48 bg-purple-600/30 rounded-full blur-3xl pointer-events-none"></div>
         <div class="absolute -bottom-20 -right-20 w-48 h-48 bg-indigo-600/30 rounded-full blur-3xl pointer-events-none"></div>
         
         <!-- Close button -->
-        <button onclick="closeComingSoonModal()" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 text-gray-300 hover:text-white flex items-center justify-center transition-all cursor-pointer">
+        <button onclick="closeComingSoonModal()" aria-label="Close modal" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 text-gray-300 hover:text-white flex items-center justify-center transition-all cursor-pointer">
           ✕
         </button>
 
@@ -57,3 +57,9 @@ function closeComingSoonModal() {
     modal.remove();
   }
 }
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    closeComingSoonModal();
+  }
+});

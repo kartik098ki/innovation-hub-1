@@ -5,6 +5,7 @@ _backup_current/
 generate_index.py
 insert_sections.py
 scratch_*.py
-build_full_website.py
+build_*.py
 update_all.py
 update_navbars.py
+*.txt

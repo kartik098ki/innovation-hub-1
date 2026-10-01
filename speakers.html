@@ -14,22 +14,19 @@
   <script src="background-animation.js" defer></script>
   <script src="coming-soon.js" defer></script>
 </head>
-
-<body style="overflow: unset;">
+<body class="bg-[#05020a] text-white min-h-screen font-sans selection:bg-purple-500 selection:text-white">
   <div id="root">
-    <div class="bg-[#05020a] text-white min-h-screen font-sans selection:bg-purple-500 selection:text-white flex flex-col justify-between">
-
-            <!-- DESKTOP NAVBAR -->
-      <div class="fixed top-0 left-0 right-0 z-50 hidden md:flex justify-center pt-5 pointer-events-none px-4">
-        <div class="pointer-events-auto rounded-full flex items-center overflow-hidden transition-all duration-300" style="box-shadow: rgba(0, 0, 0, 0.4) 0px 8px 32px -8px; border: 1px solid rgba(255, 255, 255, 0.12); background-color: rgba(5,2,10,0.92); backdrop-filter: blur(24px); padding: 8px 24px; height: 64px; min-height: 64px; max-height: 64px; width: min(95%, 1120px);">
-          <div class="flex items-center justify-between w-full px-2">
-            <!-- LOGO (NO RIDEHACK TEXT) -->
-            <div id="navbarLogo" class="shrink-0 flex items-center transition-all duration-300 opacity-100 translate-y-0">
-              <a class="flex items-center cursor-pointer group" href="index.html">
-                <img alt="Innovation Hub Logo" class="h-10 w-auto object-contain group-hover:scale-105 transition-transform" src="innovation-logo.png">
-              </a>
-            </div>
-                    <!-- SPACIOUS NAV LINKS -->
+  <!-- UNIFIED FLOATING NAVBAR -->
+  <div class="fixed top-0 left-0 right-0 z-50 hidden md:flex justify-center pt-5 pointer-events-none px-4">
+    <div id="desktopNavbarPanel" class="pointer-events-auto rounded-full flex items-center overflow-hidden transition-all duration-300" style="box-shadow: rgba(0, 0, 0, 0.4) 0px 8px 32px -8px; border: 1px solid rgba(255, 255, 255, 0.12); background-color: rgba(5,2,10,0.92); backdrop-filter: blur(24px); padding: 8px 24px; height: 64px; min-height: 64px; max-height: 64px; width: min(95%, 1120px);">
+      <div class="flex items-center justify-between w-full px-2">
+        <!-- LOGO (NO RIDEHACK TEXT) -->
+        <div id="navbarLogo" class="shrink-0 flex items-center transition-all duration-300 opacity-100 translate-y-0">
+          <a class="flex items-center cursor-pointer group" href="index.html">
+            <img alt="Innovation Hub Logo" class="h-10 w-auto object-contain group-hover:scale-105 transition-transform" src="innovation-logo.png">
+          </a>
+        </div>
+        <!-- SPACIOUS NAV LINKS -->
         <div id="navbarLinks" class="flex items-center justify-center gap-3 lg:gap-6 mx-auto transition-all duration-300 opacity-100 pointer-events-auto overflow-hidden">
           <a href="index.html" class="px-3 py-1.5 text-xs sm:text-sm font-medium transition-colors rounded-full whitespace-nowrap text-gray-300 hover:text-white hover:bg-white/5">Home</a>
           <a href="index.html#about" class="px-3 py-1.5 text-xs sm:text-sm font-medium transition-colors rounded-full whitespace-nowrap text-gray-300 hover:text-white hover:bg-white/5">About</a>
@@ -39,52 +36,238 @@
           <a href="javascript:void(0)" onclick="openComingSoonModal('Speaker Registrations')" class="px-3 py-1.5 text-xs sm:text-sm font-medium transition-colors rounded-full whitespace-nowrap text-gray-300 hover:text-white hover:bg-white/5">Speakers</a>
           <a href="contact.html" class="px-3 py-1.5 text-xs sm:text-sm font-medium transition-colors rounded-full whitespace-nowrap text-gray-300 hover:text-white hover:bg-white/5">Contact</a>
         </div>
-            <!-- REGISTER BUTTON -->
-            <div id="navbarRegister" class="shrink-0 flex items-center transition-all duration-300">
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSfo1yDY9sdHcOif3eGItnUyBE8StgveHDqJppyfqZ0NtJaWwg/viewform" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white rounded-full text-sm font-extrabold tracking-wide transition-all shadow-[0_0_20px_rgba(168,85,247,0.5)] hover:scale-105">
-                <span>Register</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- MOBILE TOP BAR -->
-      <div class="fixed top-0 left-0 right-0 z-50 md:hidden">
-        <div class="flex items-center justify-between px-4 py-3 bg-[#05020a]/95 backdrop-blur-md border-b border-white/10">
-          <a class="flex items-center" href="index.html">
-            <img alt="Innovation Hub Logo" class="h-8 w-auto object-contain" src="innovation-logo.png">
+        <!-- REGISTER BUTTON -->
+        <div id="navbarRegister" class="shrink-0 flex items-center transition-all duration-300 opacity-100 translate-y-0">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfo1yDY9sdHcOif3eGItnUyBE8StgveHDqJppyfqZ0NtJaWwg/viewform" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white rounded-full text-sm font-extrabold tracking-wide transition-all shadow-[0_0_20px_rgba(168,85,247,0.5)] hover:scale-105">
+            <span>Register</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
           </a>
-          <div class="flex items-center gap-3">
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfo1yDY9sdHcOif3eGItnUyBE8StgveHDqJppyfqZ0NtJaWwg/viewform" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-full text-xs font-bold shadow-[0_0_12px_rgba(168,85,247,0.4)]">
-              Register
-            </a>
-            <button id="mobileMenuBtn" onclick="toggleMobileMenu()" aria-label="Toggle mobile menu" class="w-9 h-9 flex items-center justify-center rounded-lg bg-white/5 border border-white/10 text-white hover:bg-white/10 transition-colors">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
-            </button>
-          </div>
         </div>
       </div>
+    </div>
+  </div>
 
-        <!-- MOBILE MENU DRAWER -->
+  <!-- MOBILE TOP BAR -->
+  <div class="fixed top-0 left-0 right-0 z-50 md:hidden">
+    <div class="flex items-center justify-between px-4 py-3 bg-[#05020a]/95 backdrop-blur-md border-b border-white/10">
+      <a class="flex items-center" href="index.html">
+        <img alt="Innovation Hub Logo" class="h-8 w-auto object-contain" src="innovation-logo.png">
+      </a>
+      <div class="flex items-center gap-3">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfo1yDY9sdHcOif3eGItnUyBE8StgveHDqJppyfqZ0NtJaWwg/viewform" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-full text-xs font-bold shadow-[0_0_12px_rgba(168,85,247,0.4)]">
+          Register
+        </a>
+        <button id="mobileMenuBtn" onclick="toggleMobileMenu()" aria-label="Toggle mobile menu" class="w-9 h-9 flex items-center justify-center rounded-lg bg-white/5 border border-white/10 text-white hover:bg-white/10 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MOBILE MENU DRAWER -->
   <div id="mobileMenuDrawer" style="display:none; position:fixed; top:58px; left:0; right:0; background:rgba(5,2,10,0.98); backdrop-filter:blur(24px); border-bottom:1px solid rgba(255,255,255,0.1); padding:24px 20px; z-index:9999;">
     <div style="display:flex; flex-direction:column; gap:16px; align-items:center;">
-      <a href="index.html" style="color:#d1d5db; font-size:16px; font-weight:500; text-decoration:none;">Home</a>
-      <a href="index.html#about" style="color:#d1d5db; font-size:16px; font-weight:500; text-decoration:none;">About</a>
-      <a href="events.html" style="color:#d1d5db; font-size:16px; font-weight:500; text-decoration:none;">Domains</a>
-      <a href="sponsors.html" style="color:#d1d5db; font-size:16px; font-weight:500; text-decoration:none;">Grants</a>
-      <a href="team.html" style="color:#d1d5db; font-size:16px; font-weight:500; text-decoration:none;">Team</a>
-      <a href="javascript:void(0)" onclick="openComingSoonModal('Speaker Registrations')" style="color:#d1d5db; font-size:16px; font-weight:500; text-decoration:none;">Speakers</a>
-      <a href="contact.html" style="color:#d1d5db; font-size:16px; font-weight:500; text-decoration:none;">Contact</a>
+      <a href="index.html" onclick="toggleMobileMenu()" style="color:white; font-size:16px; font-weight:600; text-decoration:none;">Home</a>
+      <a href="index.html#about" onclick="toggleMobileMenu()" style="color:#d1d5db; font-size:16px; font-weight:500; text-decoration:none;">About</a>
+      <a href="events.html" onclick="toggleMobileMenu()" style="color:#d1d5db; font-size:16px; font-weight:500; text-decoration:none;">Domains</a>
+      <a href="sponsors.html" onclick="toggleMobileMenu()" style="color:#d1d5db; font-size:16px; font-weight:500; text-decoration:none;">Grants</a>
+      <a href="team.html" onclick="toggleMobileMenu()" style="color:#d1d5db; font-size:16px; font-weight:500; text-decoration:none;">Team</a>
+      <a href="javascript:void(0)" onclick="toggleMobileMenu(); openComingSoonModal('Speaker Registrations');" style="color:#d1d5db; font-size:16px; font-weight:500; text-decoration:none;">Speakers</a>
+      <a href="contact.html" onclick="toggleMobileMenu()" style="color:#d1d5db; font-size:16px; font-weight:500; text-decoration:none;">Contact</a>
       <a href="https://docs.google.com/forms/d/e/1FAIpQLSfo1yDY9sdHcOif3eGItnUyBE8StgveHDqJppyfqZ0NtJaWwg/viewform" target="_blank" rel="noopener noreferrer" style="margin-top:6px; background:linear-gradient(to right, #9333ea, #4f46e5); color:white; font-size:14px; font-weight:700; text-decoration:none; padding:10px 28px; border-radius:9999px; display:inline-flex; align-items:center; gap:8px;">
         <span>Register</span>
         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
       </a>
     </div>
   </div>
-</footer>
+
+<main class="relative z-0 pt-32 sm:pt-40 pb-20">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+
+          <!-- BADGE -->
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-purple-500/40 bg-purple-500/15 mb-6">
+            <span class="w-2.5 h-2.5 rounded-full bg-yellow-400 animate-pulse"></span>
+            <span class="text-xs sm:text-sm text-purple-200 uppercase tracking-widest font-bold">Speakers Lineup • Coming Soon</span>
+          </div>
+
+          <!-- HEADLINE -->
+          <h1 class="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight text-white mb-6 uppercase">
+            VISIONARY <span class="bg-gradient-to-r from-purple-400 via-pink-400 to-indigo-300 bg-clip-text text-transparent">SPEAKERS</span>
+          </h1>
+
+          <p class="text-gray-300 text-base sm:text-xl md:text-2xl leading-relaxed font-light max-w-3xl mx-auto mb-12">
+            We are curating an extraordinary cohort of unicorn founders, venture capitalists, and tech pioneers to inspire and evaluate founders at <span class="text-white font-semibold">Ridehack 2026</span>.
+          </p>
+
+          <!-- HIGHLIGHT CARDS -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-16 text-left">
+            <div class="p-6 rounded-3xl bg-white/5 border border-white/10 hover:border-purple-500/40 transition-all duration-300 group hover:-translate-y-1">
+              <div class="w-12 h-12 rounded-2xl bg-purple-500/20 border border-purple-500/30 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
+                🦄
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2">Unicorn Founders</h3>
+              <p class="text-gray-400 text-sm leading-relaxed">
+                High-impact keynotes on zero-to-one execution, product-market fit, and hyper-scaling ventures.
+              </p>
+            </div>
+
+            <div class="p-6 rounded-3xl bg-white/5 border border-white/10 hover:border-purple-500/40 transition-all duration-300 group hover:-translate-y-1">
+              <div class="w-12 h-12 rounded-2xl bg-purple-500/20 border border-purple-500/30 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
+                💼
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2">Top VC Investors</h3>
+              <p class="text-gray-400 text-sm leading-relaxed">
+                Direct insights from institutional venture funds on investment theses and what it takes to secure capital.
+              </p>
+            </div>
+
+            <div class="p-6 rounded-3xl bg-white/5 border border-white/10 hover:border-purple-500/40 transition-all duration-300 group hover:-translate-y-1">
+              <div class="w-12 h-12 rounded-2xl bg-purple-500/20 border border-purple-500/30 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
+                ⚡
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2">Deep-Tech Leaders</h3>
+              <p class="text-gray-400 text-sm leading-relaxed">
+                Masterclasses exploring generative AI, hardware, space-tech, sustainability, and applied research.
+              </p>
+            </div>
+          </div>
+
+          <!-- CTA ACTIONS -->
+          <div class="flex flex-wrap items-center justify-center gap-4 mt-8">
+            <a href="https://chat.whatsapp.com/EIkSCGxSinkHK2MURArv8c" target="_blank" rel="noopener noreferrer" class="px-8 py-4 rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-bold text-base hover:from-purple-500 hover:to-indigo-500 transition-all shadow-[0_0_30px_rgba(168,85,247,0.5)] hover:scale-105">
+              Join Community for Speaker Alerts
+            </a>
+            <a href="index.html" class="px-8 py-4 rounded-full bg-white/10 border border-white/20 text-white font-semibold text-base hover:bg-white/20 transition-all hover:scale-105">
+              Back to Home
+            </a>
+          </div>
+
+        </div>
+      </main>
+
+      <!-- UNIFIED FOOTER -->
+      <!-- UNIFIED 4-COLUMN FOOTER (MATCHING IMAGE 1) -->
+<!-- UNIFIED FOOTER (MATCHING REFERENCE IMAGE) -->
+<footer class="relative bg-gradient-to-b from-[#0a0418] via-[#05020a] to-[#030106] border-t border-purple-500/30 pt-16 pb-12 px-6 sm:px-10 lg:px-16 overflow-hidden group">
+  <!-- Glowing top line -->
+  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[2px] bg-gradient-to-r from-transparent via-purple-500/80 to-transparent shadow-[0_0_30px_rgba(168,85,247,0.5)]"></div>
+  <div class="absolute top-0 left-1/3 w-96 h-40 bg-purple-600/10 blur-3xl pointer-events-none"></div>
+
+  <div class="max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12 pb-14 border-b border-white/10">
+      
+      <!-- Brand & Mission Column (5 cols) -->
+      <div class="lg:col-span-5 flex flex-col justify-between space-y-6">
+        <div>
+          <a href="index.html" class="inline-flex items-center gap-3 mb-6 group">
+            <img src="innovation-logo.png" alt="Innovation Hub Logo" class="h-12 w-auto object-contain group-hover:scale-105 transition-transform">
+          </a>
+          <p class="text-gray-400 text-sm leading-relaxed max-w-sm">
+            Empowering the next generation of deep-tech innovators.
+            <br>
+            <strong class="text-white font-semibold">Join us at Ridehack 2026</strong> to shape the future of technology and entrepreneurship in India.
+          </p>
+        </div>
+
+        <!-- Social Media Icon Buttons -->
+        <div class="flex items-center gap-3 pt-2">
+          <a href="https://www.instagram.com/innovation.jiit/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="w-10 h-10 rounded-full bg-white/5 hover:bg-white/15 border border-white/10 hover:border-purple-400 text-gray-300 hover:text-white flex items-center justify-center transition-all hover:scale-110">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/innovation-jiit/posts/?feedView=all" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="w-10 h-10 rounded-full bg-white/5 hover:bg-white/15 border border-white/10 hover:border-purple-400 text-gray-300 hover:text-white flex items-center justify-center transition-all hover:scale-110">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+          </a>
+          <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter / X" class="w-10 h-10 rounded-full bg-white/5 hover:bg-white/15 border border-white/10 hover:border-purple-400 text-gray-300 hover:text-white flex items-center justify-center transition-all hover:scale-110">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="w-10 h-10 rounded-full bg-white/5 hover:bg-white/15 border border-white/10 hover:border-purple-400 text-gray-300 hover:text-white flex items-center justify-center transition-all hover:scale-110">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path><path d="m10 15 5-3-5-3z"></path></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- EXPLORE Column (2 cols) -->
+      <div class="lg:col-span-2">
+        <div class="flex items-center gap-2 mb-5">
+          <span class="w-6 h-[2px] bg-purple-500 rounded-full"></span>
+          <span class="text-xs font-black uppercase tracking-widest text-white">EXPLORE</span>
+        </div>
+        <ul class="space-y-3 text-sm">
+          <li><a href="events.html" class="text-gray-400 hover:text-white transition-colors flex items-center gap-2"><span class="text-purple-400 text-xs">•</span> Events</a></li>
+          <li><a href="sponsors.html" class="text-gray-400 hover:text-white transition-colors flex items-center gap-2"><span class="text-purple-400 text-xs">•</span> Sponsors</a></li>
+          <li><a href="team.html" class="text-gray-400 hover:text-white transition-colors flex items-center gap-2"><span class="text-purple-400 text-xs">•</span> Team</a></li>
+          <li><a href="index.html#timeline" class="text-gray-400 hover:text-white transition-colors flex items-center gap-2"><span class="text-purple-400 text-xs">•</span> Schedule</a></li>
+          <li><a href="javascript:void(0)" onclick="openComingSoonModal('Merchandise Store')" class="text-gray-400 hover:text-white transition-colors flex items-center gap-2"><span class="text-purple-400 text-xs">•</span> Merch ↗</a></li>
+        </ul>
+      </div>
+
+      <!-- LEGAL Column (2 cols) -->
+      <div class="lg:col-span-2">
+        <div class="flex items-center gap-2 mb-5">
+          <span class="w-6 h-[2px] bg-purple-500 rounded-full"></span>
+          <span class="text-xs font-black uppercase tracking-widest text-white">LEGAL</span>
+        </div>
+        <ul class="space-y-3 text-sm">
+          <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors flex items-center gap-2"><span class="text-purple-400 text-xs">•</span> Terms &amp; Conditions</a></li>
+          <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors flex items-center gap-2"><span class="text-purple-400 text-xs">•</span> Privacy Policy</a></li>
+          <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors flex items-center gap-2"><span class="text-purple-400 text-xs">•</span> Refund Policy</a></li>
+        </ul>
+      </div>
+
+      <!-- CONTACT Column (3 cols) -->
+      <div class="lg:col-span-3">
+        <div class="flex items-center gap-2 mb-5">
+          <span class="w-6 h-[2px] bg-purple-500 rounded-full"></span>
+          <span class="text-xs font-black uppercase tracking-widest text-white">CONTACT</span>
+        </div>
+        <div class="space-y-3 text-sm">
+          <p class="text-gray-400 text-xs">Get in Touch</p>
+          <p>
+            <a href="mailto:contact@innovationjiit.in" class="text-white hover:text-purple-300 font-bold transition-colors">
+              contact@innovationjiit.in
+            </a>
+          </p>
+          <div class="text-gray-400 text-xs leading-relaxed pt-2">
+            <p class="font-semibold text-gray-200">Innovation Hub, JIIT Sector 128</p>
+            <p>Jaypee Institute of Information Technology, Noida - 201304</p>
+          </div>
+          <div class="pt-2 border-t border-white/5 space-y-1">
+            <p class="text-[11px] font-bold uppercase tracking-wider text-purple-300">Call Us</p>
+            <p class="text-xs text-gray-300"><span class="font-semibold text-white">Yash:</span> <a href="tel:+917210000082" class="text-purple-400 hover:text-white transition-colors">+91 7210000082</a></p>
+            <p class="text-xs text-gray-300"><span class="font-semibold text-white">Saloni:</span> <a href="tel:+918700497761" class="text-purple-400 hover:text-white transition-colors">+91 8700497761</a></p>
+          </div>
+          <div class="pt-2">
+            <a href="https://maps.google.com/maps?q=Jaypee+Institute+of+Information+Technology+Sector+128+Noida" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs text-purple-400 hover:text-purple-300 font-semibold transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              View on Google Maps ↗
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom copyright -->
+    <div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-gray-500 text-xs sm:text-sm tracking-wide order-2 md:order-1">
+        © 2026 Ridehack • Innovation Hub, Jaypee Institute of Information Technology (JIIT Sector 128). All rights reserved.
+      </p>
+      <div class="order-1 md:order-2 flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 hover:border-purple-500/30 transition-all cursor-default text-xs sm:text-sm">
+        <span class="text-gray-400">Organized with</span>
+        <span class="text-red-500 animate-pulse text-sm">❤️</span>
+        <span class="text-gray-400">by</span>
+        <span class="text-white font-semibold">JIIT Innovation Team</span>
+      </div>
     </div>
   </div>
+</footer>
+  </div>
+  <script>
+    function toggleMobileMenu() {
+      var drawer = document.getElementById('mobileMenuDrawer');
+      if (!drawer) return;
+      drawer.style.display = (drawer.style.display === 'none' || !drawer.style.display) ? 'block' : 'none';
+    }
+  </script>
 </body>
 </html>

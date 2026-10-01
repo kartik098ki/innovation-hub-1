@@ -11,3 +11,6 @@ update_navbars.py
 *.txt
 apply_updates.py
 update_v2.py
+update_v3.py
+apply_v3_all.py
+execute_full_update.py

@@ -12,23 +12,23 @@
 </head>
 <body class="bg-[#05020a] text-white min-h-screen font-sans selection:bg-purple-500 selection:text-white">
 
-    <!-- UNIFIED DYNAMIC FLOATING NAVBAR -->
+      <!-- UNIFIED DYNAMIC FLOATING NAVBAR -->
   <div class="fixed top-0 left-0 right-0 z-50 hidden md:flex justify-center pt-5 pointer-events-none px-4">
     <div id="desktopNavbarPanel" class="pointer-events-auto rounded-full flex items-center justify-between transition-all duration-500 ease-out" style="box-shadow: rgba(0, 0, 0, 0.45) 0px 8px 32px -8px; border: 1px solid rgba(255, 255, 255, 0.12); background-color: rgba(5,2,10,0.92); backdrop-filter: blur(24px); padding: 8px 24px; height: 64px; width: min(95%, 880px);">
       
-      <!-- LOGO: ALWAYS VISIBLE -->
+      <!-- LOGO: COMPACT & CRISP (ALWAYS VISIBLE) -->
       <div id="navbarLogo" class="shrink-0 flex items-center transition-all duration-300">
         <a class="flex items-center cursor-pointer group" href="index.html">
           <img alt="Innovation Hub Logo" class="h-9 w-auto object-contain group-hover:scale-105 transition-transform" src="innovation-logo.png">
         </a>
       </div>
 
-      <!-- SPACIOUS NAV LINKS (Clean 5 links: Home, Grants, Team, Speakers, Contact) -->
+      <!-- SPACIOUS NAV LINKS (Home, Grants, Team, Speakers -> speakers.html, Contact) -->
       <div id="navbarLinks" class="flex items-center justify-center gap-3 lg:gap-5 mx-auto transition-all duration-500 ease-out overflow-hidden" style="max-width: 480px; opacity: 1;">
         <a href="index.html" class="px-3.5 py-1.5 text-xs sm:text-sm font-medium transition-colors rounded-full whitespace-nowrap text-gray-300 hover:text-white hover:bg-white/5">Home</a>
         <a href="sponsors.html" class="px-3.5 py-1.5 text-xs sm:text-sm font-medium transition-colors rounded-full whitespace-nowrap text-gray-300 hover:text-white hover:bg-white/5">Grants</a>
         <a href="team.html" class="px-3.5 py-1.5 text-xs sm:text-sm font-medium transition-colors rounded-full whitespace-nowrap text-gray-300 hover:text-white hover:bg-white/5">Team</a>
-        <a href="javascript:void(0)" onclick="openComingSoonModal('Speaker Registrations')" class="px-3.5 py-1.5 text-xs sm:text-sm font-medium transition-colors rounded-full whitespace-nowrap text-gray-300 hover:text-white hover:bg-white/5">Speakers</a>
+        <a href="speakers.html" class="px-3.5 py-1.5 text-xs sm:text-sm font-medium transition-colors rounded-full whitespace-nowrap text-gray-300 hover:text-white hover:bg-white/5">Speakers</a>
         <a href="contact.html" class="px-3.5 py-1.5 text-xs sm:text-sm font-medium transition-colors rounded-full whitespace-nowrap text-gray-300 hover:text-white hover:bg-white/5">Contact</a>
       </div>
 
@@ -66,7 +66,7 @@
       <a href="index.html" onclick="toggleMobileMenu()" style="color:white; font-size:16px; font-weight:600; text-decoration:none;">Home</a>
       <a href="sponsors.html" onclick="toggleMobileMenu()" style="color:#d1d5db; font-size:16px; font-weight:500; text-decoration:none;">Grants</a>
       <a href="team.html" onclick="toggleMobileMenu()" style="color:#d1d5db; font-size:16px; font-weight:500; text-decoration:none;">Team</a>
-      <a href="javascript:void(0)" onclick="toggleMobileMenu(); openComingSoonModal('Speaker Registrations');" style="color:#d1d5db; font-size:16px; font-weight:500; text-decoration:none;">Speakers</a>
+      <a href="speakers.html" onclick="toggleMobileMenu()" style="color:#d1d5db; font-size:16px; font-weight:500; text-decoration:none;">Speakers</a>
       <a href="contact.html" onclick="toggleMobileMenu()" style="color:#d1d5db; font-size:16px; font-weight:500; text-decoration:none;">Contact</a>
       <a href="https://docs.google.com/forms/d/e/1FAIpQLSfo1yDY9sdHcOif3eGItnUyBE8StgveHDqJppyfqZ0NtJaWwg/viewform" target="_blank" rel="noopener noreferrer" style="margin-top:6px; background:linear-gradient(to right, #9333ea, #4f46e5); color:white; font-size:14px; font-weight:700; text-decoration:none; padding:10px 28px; border-radius:9999px; display:inline-flex; align-items:center; gap:8px;">
         <span>Register</span>
@@ -762,21 +762,21 @@
     </div>
   </main>
 
-  <!-- UNIFIED FOOTER (MATCHING USER REFERENCE IMAGE media_1790823090143.png) -->
+  <!-- UNIFIED FOOTER (MATCHING USER REQUEST: NO LEGAL, NO MERCH, SPONSORS->GRANTS, CONTACT ON RIGHT) -->
 <footer class="relative bg-gradient-to-b from-[#0a0316] via-[#05010a] to-[#020005] border-t border-purple-500/30 pt-20 pb-12 px-6 sm:px-10 lg:px-16 overflow-hidden group">
   <!-- Glowing top purple line with ambient reflection -->
   <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[2px] bg-gradient-to-r from-transparent via-purple-500/90 to-transparent shadow-[0_0_30px_rgba(168,85,247,0.7)]"></div>
   <div class="absolute top-0 left-1/3 w-[500px] h-48 bg-purple-600/10 blur-3xl pointer-events-none"></div>
 
   <div class="max-w-7xl mx-auto">
-    <!-- Huge generous column spacing matching reference screenshot -->
+    <!-- 3-Column spacious grid: Brand (5 cols) | Explore (3 cols) | Contact (4 cols on right) -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-14 xl:gap-20 pb-16">
       
       <!-- Brand & Mission Column (5 cols) -->
       <div class="lg:col-span-5 flex flex-col justify-between space-y-8">
         <div>
           <a href="index.html" class="inline-flex items-center gap-3 mb-6 group">
-            <img src="innovation-logo.png" alt="Innovation Hub Logo" class="h-12 w-auto object-contain group-hover:scale-105 transition-transform">
+            <img src="innovation-logo.png" alt="Innovation Hub Logo" class="h-10 w-auto object-contain group-hover:scale-105 transition-transform">
           </a>
           <p class="text-gray-400 text-sm leading-relaxed max-w-sm">
             Empowering the next generation of deep-tech innovators.
@@ -802,42 +802,29 @@
         </div>
       </div>
 
-      <!-- EXPLORE Column (2 cols) - NO BULLET POINTS -->
-      <div class="lg:col-span-2">
+      <!-- EXPLORE Column (3 cols) - NO BULLETS, NO MERCH, SPONSORSHIP -> GRANTS -->
+      <div class="lg:col-span-3">
         <div class="flex items-center gap-2.5 mb-6">
           <span class="w-6 h-[2px] bg-purple-500 rounded-full"></span>
           <span class="text-xs font-black uppercase tracking-widest text-white">EXPLORE</span>
         </div>
         <ul class="space-y-4 text-sm">
           <li><a href="events.html" class="text-gray-400 hover:text-white transition-colors block">Events</a></li>
-          <li><a href="sponsors.html" class="text-gray-400 hover:text-white transition-colors block">Sponsors</a></li>
+          <li><a href="sponsors.html" class="text-gray-400 hover:text-white transition-colors block">Grants</a></li>
           <li><a href="team.html" class="text-gray-400 hover:text-white transition-colors block">Team</a></li>
+          <li><a href="speakers.html" class="text-gray-400 hover:text-white transition-colors block">Speakers</a></li>
           <li><a href="index.html#timeline" class="text-gray-400 hover:text-white transition-colors block">Schedule</a></li>
-          <li><a href="javascript:void(0)" onclick="openComingSoonModal('Merchandise Store')" class="text-gray-400 hover:text-white transition-colors block">Merch ↗</a></li>
         </ul>
       </div>
 
-      <!-- LEGAL Column (2 cols) - NO BULLET POINTS -->
-      <div class="lg:col-span-2">
-        <div class="flex items-center gap-2.5 mb-6">
-          <span class="w-6 h-[2px] bg-purple-500 rounded-full"></span>
-          <span class="text-xs font-black uppercase tracking-widest text-white">LEGAL</span>
-        </div>
-        <ul class="space-y-4 text-sm">
-          <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors block">Terms &amp; Conditions</a></li>
-          <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors block">Privacy Policy</a></li>
-          <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors block">Refund Policy</a></li>
-        </ul>
-      </div>
-
-      <!-- CONTACT Column (3 cols) -->
-      <div class="lg:col-span-3">
+      <!-- CONTACT Column (4 cols on the right side) -->
+      <div class="lg:col-span-4">
         <div class="flex items-center gap-2.5 mb-6">
           <span class="w-6 h-[2px] bg-purple-500 rounded-full"></span>
           <span class="text-xs font-black uppercase tracking-widest text-white">CONTACT</span>
         </div>
         <div class="space-y-3.5 text-sm">
-          <p class="text-gray-400 text-xs">Get in Touch</p>
+          <p class="text-gray-400 text-xs uppercase tracking-wider font-semibold">Get in Touch</p>
           <p>
             <a href="mailto:contact@innovationjiit.in" class="text-white hover:text-purple-300 font-bold text-base transition-colors block">
               contact@innovationjiit.in
@@ -879,22 +866,25 @@
 </footer>
 
   
+
 <script>
   function toggleMobileMenu() {
     var drawer = document.getElementById('mobileMenuDrawer');
     if (!drawer) return;
-    drawer.style.display = (drawer.style.display === 'none' || !drawer.style.display) ? 'block' : 'none';
+    if (drawer.style.display === 'none' || drawer.style.display === '') {
+      drawer.style.display = 'block';
+    } else {
+      drawer.style.display = 'none';
+    }
   }
 
-  // Dynamic navbar: Logo & Register button always visible.
-  // On scroll down: Logo and Register button smoothly come close together in a compact pill!
-  // On scroll up: Expands back to full pill with all links!
   function initNavbarScroll() {
     var panel = document.getElementById('desktopNavbarPanel');
     var links = document.getElementById('navbarLinks');
     if (!panel || !links) return;
 
     var isCompact = false;
+
     function onScroll() {
       if (window.scrollY > 40) {
         if (!isCompact) {

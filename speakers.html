@@ -3,36 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Speakers for Ridehack 2026 at Jaypee Institute of Information Technology (JIIT Sector 128 Noida) will be announced soon.">
-  <meta name="keywords" content="Ridehack 2026, Speakers, Coming Soon, JIIT Sector 128, Innovation Hub, Startup Pitching">
-  <meta name="theme-color" content="#7c3aed">
-  <title>Speakers (Coming Soon) | Ridehack 2026 - Innovation Hub JIIT</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <meta name="description" content="Meet the Keynote Speakers, Unicorn Founders, and VC Leaders at Ridehack 2026 - Innovation Hub, JIIT Sector 128 Noida.">
+  <title>Speakers Lineup • Coming Soon | Ridehack 2026</title>
+  <link rel="icon" type="image/png" href="innovation-logo.png">
   <link rel="stylesheet" href="styles.css">
   <script src="background-animation.js" defer></script>
   <script src="coming-soon.js" defer></script>
 </head>
+
 <body class="bg-[#05020a] text-white min-h-screen font-sans selection:bg-purple-500 selection:text-white">
   <div id="root">
     <!-- UNIFIED DYNAMIC FLOATING NAVBAR -->
   <div class="fixed top-0 left-0 right-0 z-50 hidden md:flex justify-center pt-5 pointer-events-none px-4">
     <div id="desktopNavbarPanel" class="pointer-events-auto rounded-full flex items-center justify-between transition-all duration-500 ease-out" style="box-shadow: rgba(0, 0, 0, 0.45) 0px 8px 32px -8px; border: 1px solid rgba(255, 255, 255, 0.12); background-color: rgba(5,2,10,0.92); backdrop-filter: blur(24px); padding: 8px 24px; height: 64px; width: min(95%, 880px);">
       
-      <!-- LOGO: ALWAYS VISIBLE -->
+      <!-- LOGO: COMPACT & CRISP (ALWAYS VISIBLE) -->
       <div id="navbarLogo" class="shrink-0 flex items-center transition-all duration-300">
         <a class="flex items-center cursor-pointer group" href="index.html">
           <img alt="Innovation Hub Logo" class="h-9 w-auto object-contain group-hover:scale-105 transition-transform" src="innovation-logo.png">
         </a>
       </div>
 
-      <!-- SPACIOUS NAV LINKS (Clean 5 links: Home, Grants, Team, Speakers, Contact) -->
+      <!-- SPACIOUS NAV LINKS (Home, Grants, Team, Speakers -> speakers.html, Contact) -->
       <div id="navbarLinks" class="flex items-center justify-center gap-3 lg:gap-5 mx-auto transition-all duration-500 ease-out overflow-hidden" style="max-width: 480px; opacity: 1;">
         <a href="index.html" class="px-3.5 py-1.5 text-xs sm:text-sm font-medium transition-colors rounded-full whitespace-nowrap text-gray-300 hover:text-white hover:bg-white/5">Home</a>
         <a href="sponsors.html" class="px-3.5 py-1.5 text-xs sm:text-sm font-medium transition-colors rounded-full whitespace-nowrap text-gray-300 hover:text-white hover:bg-white/5">Grants</a>
         <a href="team.html" class="px-3.5 py-1.5 text-xs sm:text-sm font-medium transition-colors rounded-full whitespace-nowrap text-gray-300 hover:text-white hover:bg-white/5">Team</a>
-        <a href="javascript:void(0)" onclick="openComingSoonModal('Speaker Registrations')" class="px-3.5 py-1.5 text-xs sm:text-sm font-medium transition-colors rounded-full whitespace-nowrap text-gray-300 hover:text-white hover:bg-white/5">Speakers</a>
+        <a href="speakers.html" class="px-3.5 py-1.5 text-xs sm:text-sm font-medium transition-colors rounded-full whitespace-nowrap text-gray-300 hover:text-white hover:bg-white/5">Speakers</a>
         <a href="contact.html" class="px-3.5 py-1.5 text-xs sm:text-sm font-medium transition-colors rounded-full whitespace-nowrap text-gray-300 hover:text-white hover:bg-white/5">Contact</a>
       </div>
 
@@ -70,7 +67,7 @@
       <a href="index.html" onclick="toggleMobileMenu()" style="color:white; font-size:16px; font-weight:600; text-decoration:none;">Home</a>
       <a href="sponsors.html" onclick="toggleMobileMenu()" style="color:#d1d5db; font-size:16px; font-weight:500; text-decoration:none;">Grants</a>
       <a href="team.html" onclick="toggleMobileMenu()" style="color:#d1d5db; font-size:16px; font-weight:500; text-decoration:none;">Team</a>
-      <a href="javascript:void(0)" onclick="toggleMobileMenu(); openComingSoonModal('Speaker Registrations');" style="color:#d1d5db; font-size:16px; font-weight:500; text-decoration:none;">Speakers</a>
+      <a href="speakers.html" onclick="toggleMobileMenu()" style="color:#d1d5db; font-size:16px; font-weight:500; text-decoration:none;">Speakers</a>
       <a href="contact.html" onclick="toggleMobileMenu()" style="color:#d1d5db; font-size:16px; font-weight:500; text-decoration:none;">Contact</a>
       <a href="https://docs.google.com/forms/d/e/1FAIpQLSfo1yDY9sdHcOif3eGItnUyBE8StgveHDqJppyfqZ0NtJaWwg/viewform" target="_blank" rel="noopener noreferrer" style="margin-top:6px; background:linear-gradient(to right, #9333ea, #4f46e5); color:white; font-size:14px; font-weight:700; text-decoration:none; padding:10px 28px; border-radius:9999px; display:inline-flex; align-items:center; gap:8px;">
         <span>Register</span>
@@ -78,85 +75,157 @@
       </a>
     </div>
   </div>
-<main class="relative z-0 pt-32 sm:pt-40 pb-20">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 
-          <!-- BADGE -->
-          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-purple-500/40 bg-purple-500/15 mb-6">
-            <span class="w-2.5 h-2.5 rounded-full bg-yellow-400 animate-pulse"></span>
-            <span class="text-xs sm:text-sm text-purple-200 uppercase tracking-widest font-bold">Speakers Lineup • Coming Soon</span>
-          </div>
+    <main class="relative z-0 pt-36 sm:pt-44 pb-28 overflow-hidden">
+      <!-- Ambient purple background blurs -->
+      <div class="absolute top-20 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-purple-600/15 rounded-full blur-[140px] pointer-events-none"></div>
+      <div class="absolute top-60 right-10 w-96 h-96 bg-indigo-600/10 rounded-full blur-[120px] pointer-events-none"></div>
 
-          <!-- HEADLINE -->
-          <h1 class="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight text-white mb-6 uppercase">
-            VISIONARY <span class="bg-gradient-to-r from-purple-400 via-pink-400 to-indigo-300 bg-clip-text text-transparent">SPEAKERS</span>
-          </h1>
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
 
-          <p class="text-gray-300 text-base sm:text-xl md:text-2xl leading-relaxed font-light max-w-3xl mx-auto mb-12">
-            We are curating an extraordinary cohort of unicorn founders, venture capitalists, and tech pioneers to inspire and evaluate founders at <span class="text-white font-semibold">Ridehack 2026</span>.
-          </p>
+        <!-- SWEET COMING SOON BADGE -->
+        <div class="inline-flex items-center gap-2.5 px-5 py-2 rounded-full border border-purple-500/40 bg-purple-500/15 mb-8 shadow-[0_0_20px_rgba(168,85,247,0.3)]">
+          <span class="w-2.5 h-2.5 rounded-full bg-pink-400 animate-pulse"></span>
+          <span class="text-xs sm:text-sm text-purple-200 uppercase tracking-widest font-extrabold">Speakers Lineup • Launching Soon</span>
+        </div>
 
-          <!-- HIGHLIGHT CARDS -->
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-16 text-left">
-            <div class="p-6 rounded-3xl bg-white/5 border border-white/10 hover:border-purple-500/40 transition-all duration-300 group hover:-translate-y-1">
-              <div class="w-12 h-12 rounded-2xl bg-purple-500/20 border border-purple-500/30 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
+        <!-- MAIN TITLE -->
+        <h1 class="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight text-white mb-6 uppercase leading-tight">
+          WORLD-CLASS <span class="bg-gradient-to-r from-purple-400 via-pink-400 to-indigo-300 bg-clip-text text-transparent">SPEAKERS</span>
+        </h1>
+
+        <p class="text-gray-300 text-base sm:text-lg md:text-xl leading-relaxed max-w-2xl mx-auto mb-16 font-light">
+          We are bringing together India's top unicorn founders, institutional VC investors, and pioneering AI researchers to keynote and mentor at <strong class="text-white font-semibold">RIDE Hack 2026</strong>.
+        </p>
+
+        <!-- 4 SWEET PREVIEW / TEASER SPEAKER CARDS -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-20 text-left">
+          
+          <!-- Speaker Card 1 -->
+          <div class="p-7 rounded-3xl bg-white/[0.03] border border-white/10 hover:border-purple-500/50 transition-all duration-300 group hover:-translate-y-2 flex flex-col justify-between shadow-2xl relative overflow-hidden">
+            <div class="absolute -top-12 -right-12 w-28 h-28 bg-purple-500/10 rounded-full blur-2xl pointer-events-none"></div>
+            <div>
+              <div class="w-16 h-16 rounded-2xl bg-purple-500/20 border border-purple-500/30 flex items-center justify-center text-3xl mb-6 shadow-inner group-hover:scale-110 transition-transform">
                 🦄
               </div>
-              <h3 class="text-xl font-bold text-white mb-2">Unicorn Founders</h3>
-              <p class="text-gray-400 text-sm leading-relaxed">
-                High-impact keynotes on zero-to-one execution, product-market fit, and hyper-scaling ventures.
+              <span class="text-[11px] font-extrabold tracking-widest uppercase px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 border border-purple-400/30 inline-block mb-3">Keynote</span>
+              <h3 class="text-xl font-bold text-white mb-1">Unicorn Founder</h3>
+              <p class="text-purple-300/80 text-xs font-semibold mb-3">DeepTech &amp; AI Enterprise</p>
+              <p class="text-gray-400 text-xs leading-relaxed">
+                Pioneering founder sharing insights on zero-to-one scale, fundraising, and enterprise AI architectures.
               </p>
             </div>
-
-            <div class="p-6 rounded-3xl bg-white/5 border border-white/10 hover:border-purple-500/40 transition-all duration-300 group hover:-translate-y-1">
-              <div class="w-12 h-12 rounded-2xl bg-purple-500/20 border border-purple-500/30 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
-                💼
-              </div>
-              <h3 class="text-xl font-bold text-white mb-2">Top VC Investors</h3>
-              <p class="text-gray-400 text-sm leading-relaxed">
-                Direct insights from institutional venture funds on investment theses and what it takes to secure capital.
-              </p>
-            </div>
-
-            <div class="p-6 rounded-3xl bg-white/5 border border-white/10 hover:border-purple-500/40 transition-all duration-300 group hover:-translate-y-1">
-              <div class="w-12 h-12 rounded-2xl bg-purple-500/20 border border-purple-500/30 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
-                ⚡
-              </div>
-              <h3 class="text-xl font-bold text-white mb-2">Deep-Tech Leaders</h3>
-              <p class="text-gray-400 text-sm leading-relaxed">
-                Masterclasses exploring generative AI, hardware, space-tech, sustainability, and applied research.
-              </p>
+            <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-xs">
+              <span class="text-gray-500 font-medium">Stage Keynote</span>
+              <span class="text-purple-300 font-bold flex items-center gap-1">Unveiling Soon ✨</span>
             </div>
           </div>
 
-          <!-- CTA ACTIONS -->
-          <div class="flex flex-wrap items-center justify-center gap-4 mt-8">
-            <a href="https://chat.whatsapp.com/EIkSCGxSinkHK2MURArv8c" target="_blank" rel="noopener noreferrer" class="px-8 py-4 rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-bold text-base hover:from-purple-500 hover:to-indigo-500 transition-all shadow-[0_0_30px_rgba(168,85,247,0.5)] hover:scale-105">
-              Join Community for Speaker Alerts
-            </a>
-            <a href="index.html" class="px-8 py-4 rounded-full bg-white/10 border border-white/20 text-white font-semibold text-base hover:bg-white/20 transition-all hover:scale-105">
-              Back to Home
-            </a>
+          <!-- Speaker Card 2 -->
+          <div class="p-7 rounded-3xl bg-white/[0.03] border border-white/10 hover:border-pink-500/50 transition-all duration-300 group hover:-translate-y-2 flex flex-col justify-between shadow-2xl relative overflow-hidden">
+            <div class="absolute -top-12 -right-12 w-28 h-28 bg-pink-500/10 rounded-full blur-2xl pointer-events-none"></div>
+            <div>
+              <div class="w-16 h-16 rounded-2xl bg-pink-500/20 border border-pink-500/30 flex items-center justify-center text-3xl mb-6 shadow-inner group-hover:scale-110 transition-transform">
+                💼
+              </div>
+              <span class="text-[11px] font-extrabold tracking-widest uppercase px-3 py-1 rounded-full bg-pink-500/20 text-pink-300 border border-pink-400/30 inline-block mb-3">Venture Capital</span>
+              <h3 class="text-xl font-bold text-white mb-1">Managing Partner</h3>
+              <p class="text-pink-300/80 text-xs font-semibold mb-3">Tier-1 Venture Fund</p>
+              <p class="text-gray-400 text-xs leading-relaxed">
+                Leading venture capitalist discussing 2026 investment theses, valuation models, and seed capital.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-xs">
+              <span class="text-gray-500 font-medium">Grand Jury</span>
+              <span class="text-pink-300 font-bold flex items-center gap-1">Unveiling Soon ✨</span>
+            </div>
+          </div>
+
+          <!-- Speaker Card 3 -->
+          <div class="p-7 rounded-3xl bg-white/[0.03] border border-white/10 hover:border-indigo-500/50 transition-all duration-300 group hover:-translate-y-2 flex flex-col justify-between shadow-2xl relative overflow-hidden">
+            <div class="absolute -top-12 -right-12 w-28 h-28 bg-indigo-500/10 rounded-full blur-2xl pointer-events-none"></div>
+            <div>
+              <div class="w-16 h-16 rounded-2xl bg-indigo-500/20 border border-indigo-500/30 flex items-center justify-center text-3xl mb-6 shadow-inner group-hover:scale-110 transition-transform">
+                ⚡
+              </div>
+              <span class="text-[11px] font-extrabold tracking-widest uppercase px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-400/30 inline-block mb-3">DeepTech</span>
+              <h3 class="text-xl font-bold text-white mb-1">Principal Scientist</h3>
+              <p class="text-indigo-300/80 text-xs font-semibold mb-3">AI &amp; Robotics Research</p>
+              <p class="text-gray-400 text-xs leading-relaxed">
+                Breakthrough researcher unpacking autonomous agent architectures and applied machine learning.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-xs">
+              <span class="text-gray-500 font-medium">Masterclass</span>
+              <span class="text-indigo-300 font-bold flex items-center gap-1">Unveiling Soon ✨</span>
+            </div>
+          </div>
+
+          <!-- Speaker Card 4 -->
+          <div class="p-7 rounded-3xl bg-white/[0.03] border border-white/10 hover:border-purple-500/50 transition-all duration-300 group hover:-translate-y-2 flex flex-col justify-between shadow-2xl relative overflow-hidden">
+            <div class="absolute -top-12 -right-12 w-28 h-28 bg-purple-500/10 rounded-full blur-2xl pointer-events-none"></div>
+            <div>
+              <div class="w-16 h-16 rounded-2xl bg-purple-500/20 border border-purple-500/30 flex items-center justify-center text-3xl mb-6 shadow-inner group-hover:scale-110 transition-transform">
+                💡
+              </div>
+              <span class="text-[11px] font-extrabold tracking-widest uppercase px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 border border-purple-400/30 inline-block mb-3">Ecosystem</span>
+              <h3 class="text-xl font-bold text-white mb-1">Angel Syndicate Lead</h3>
+              <p class="text-purple-300/80 text-xs font-semibold mb-3">Startup Accelerator Mentor</p>
+              <p class="text-gray-400 text-xs leading-relaxed">
+                Veteran mentor guiding student founders from collegiate prototype to institutional pitch rounds.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-xs">
+              <span class="text-gray-500 font-medium">Founder Clinic</span>
+              <span class="text-purple-300 font-bold flex items-center gap-1">Unveiling Soon ✨</span>
+            </div>
           </div>
 
         </div>
-      </main>
 
-      <!-- UNIFIED FOOTER (MATCHING USER REFERENCE IMAGE media_1790823090143.png) -->
+        <!-- NOTIFICATION / COMMUNITY CTA CARD -->
+        <div class="p-10 sm:p-14 rounded-3xl bg-gradient-to-b from-[#160a2b] via-[#0d051c] to-[#06020c] border border-purple-500/40 max-w-3xl mx-auto shadow-[0_0_50px_rgba(168,85,247,0.25)] relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-60 h-60 bg-purple-600/10 rounded-full blur-3xl pointer-events-none"></div>
+          
+          <span class="text-xs uppercase font-extrabold tracking-widest text-purple-300 px-4 py-1.5 rounded-full bg-purple-500/20 border border-purple-400/30 inline-block mb-4">
+            First Announcement Access
+          </span>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-white mb-4 tracking-tight">
+            Be The First To Know
+          </h2>
+          <p class="text-gray-300 text-sm sm:text-base leading-relaxed mb-8 max-w-xl mx-auto">
+            Speaker headliners and schedule releases will be broadcasted directly to our community members and registered attendees first.
+          </p>
+
+          <div class="flex flex-wrap items-center justify-center gap-4">
+            <a href="https://chat.whatsapp.com/EIkSCGxSinkHK2MURArv8c" target="_blank" rel="noopener noreferrer" class="px-8 py-3.5 rounded-full bg-[#25D366] hover:bg-[#20ba59] text-white font-bold text-sm transition-all shadow-[0_0_20px_rgba(37,211,102,0.4)] hover:scale-105 inline-flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+              <span>Get WhatsApp Alerts</span>
+            </a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfo1yDY9sdHcOif3eGItnUyBE8StgveHDqJppyfqZ0NtJaWwg/viewform" target="_blank" rel="noopener noreferrer" class="px-8 py-3.5 rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold text-sm transition-all shadow-[0_0_20px_rgba(168,85,247,0.4)] hover:scale-105">
+              Register for Summit ↗
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+<!-- UNIFIED FOOTER (MATCHING USER REQUEST: NO LEGAL, NO MERCH, SPONSORS->GRANTS, CONTACT ON RIGHT) -->
 <footer class="relative bg-gradient-to-b from-[#0a0316] via-[#05010a] to-[#020005] border-t border-purple-500/30 pt-20 pb-12 px-6 sm:px-10 lg:px-16 overflow-hidden group">
   <!-- Glowing top purple line with ambient reflection -->
   <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[2px] bg-gradient-to-r from-transparent via-purple-500/90 to-transparent shadow-[0_0_30px_rgba(168,85,247,0.7)]"></div>
   <div class="absolute top-0 left-1/3 w-[500px] h-48 bg-purple-600/10 blur-3xl pointer-events-none"></div>
 
   <div class="max-w-7xl mx-auto">
-    <!-- Huge generous column spacing matching reference screenshot -->
+    <!-- 3-Column spacious grid: Brand (5 cols) | Explore (3 cols) | Contact (4 cols on right) -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-14 xl:gap-20 pb-16">
       
       <!-- Brand & Mission Column (5 cols) -->
       <div class="lg:col-span-5 flex flex-col justify-between space-y-8">
         <div>
           <a href="index.html" class="inline-flex items-center gap-3 mb-6 group">
-            <img src="innovation-logo.png" alt="Innovation Hub Logo" class="h-12 w-auto object-contain group-hover:scale-105 transition-transform">
+            <img src="innovation-logo.png" alt="Innovation Hub Logo" class="h-10 w-auto object-contain group-hover:scale-105 transition-transform">
           </a>
           <p class="text-gray-400 text-sm leading-relaxed max-w-sm">
             Empowering the next generation of deep-tech innovators.
@@ -182,42 +251,29 @@
         </div>
       </div>
 
-      <!-- EXPLORE Column (2 cols) - NO BULLET POINTS -->
-      <div class="lg:col-span-2">
+      <!-- EXPLORE Column (3 cols) - NO BULLETS, NO MERCH, SPONSORSHIP -> GRANTS -->
+      <div class="lg:col-span-3">
         <div class="flex items-center gap-2.5 mb-6">
           <span class="w-6 h-[2px] bg-purple-500 rounded-full"></span>
           <span class="text-xs font-black uppercase tracking-widest text-white">EXPLORE</span>
         </div>
         <ul class="space-y-4 text-sm">
           <li><a href="events.html" class="text-gray-400 hover:text-white transition-colors block">Events</a></li>
-          <li><a href="sponsors.html" class="text-gray-400 hover:text-white transition-colors block">Sponsors</a></li>
+          <li><a href="sponsors.html" class="text-gray-400 hover:text-white transition-colors block">Grants</a></li>
           <li><a href="team.html" class="text-gray-400 hover:text-white transition-colors block">Team</a></li>
+          <li><a href="speakers.html" class="text-gray-400 hover:text-white transition-colors block">Speakers</a></li>
           <li><a href="index.html#timeline" class="text-gray-400 hover:text-white transition-colors block">Schedule</a></li>
-          <li><a href="javascript:void(0)" onclick="openComingSoonModal('Merchandise Store')" class="text-gray-400 hover:text-white transition-colors block">Merch ↗</a></li>
         </ul>
       </div>
 
-      <!-- LEGAL Column (2 cols) - NO BULLET POINTS -->
-      <div class="lg:col-span-2">
-        <div class="flex items-center gap-2.5 mb-6">
-          <span class="w-6 h-[2px] bg-purple-500 rounded-full"></span>
-          <span class="text-xs font-black uppercase tracking-widest text-white">LEGAL</span>
-        </div>
-        <ul class="space-y-4 text-sm">
-          <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors block">Terms &amp; Conditions</a></li>
-          <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors block">Privacy Policy</a></li>
-          <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors block">Refund Policy</a></li>
-        </ul>
-      </div>
-
-      <!-- CONTACT Column (3 cols) -->
-      <div class="lg:col-span-3">
+      <!-- CONTACT Column (4 cols on the right side) -->
+      <div class="lg:col-span-4">
         <div class="flex items-center gap-2.5 mb-6">
           <span class="w-6 h-[2px] bg-purple-500 rounded-full"></span>
           <span class="text-xs font-black uppercase tracking-widest text-white">CONTACT</span>
         </div>
         <div class="space-y-3.5 text-sm">
-          <p class="text-gray-400 text-xs">Get in Touch</p>
+          <p class="text-gray-400 text-xs uppercase tracking-wider font-semibold">Get in Touch</p>
           <p>
             <a href="mailto:contact@innovationjiit.in" class="text-white hover:text-purple-300 font-bold text-base transition-colors block">
               contact@innovationjiit.in
@@ -258,23 +314,26 @@
   </div>
 </footer>
   </div>
+
   
 <script>
   function toggleMobileMenu() {
     var drawer = document.getElementById('mobileMenuDrawer');
     if (!drawer) return;
-    drawer.style.display = (drawer.style.display === 'none' || !drawer.style.display) ? 'block' : 'none';
+    if (drawer.style.display === 'none' || drawer.style.display === '') {
+      drawer.style.display = 'block';
+    } else {
+      drawer.style.display = 'none';
+    }
   }
 
-  // Dynamic navbar: Logo & Register button always visible.
-  // On scroll down: Logo and Register button smoothly come close together in a compact pill!
-  // On scroll up: Expands back to full pill with all links!
   function initNavbarScroll() {
     var panel = document.getElementById('desktopNavbarPanel');
     var links = document.getElementById('navbarLinks');
     if (!panel || !links) return;
 
     var isCompact = false;
+
     function onScroll() {
       if (window.scrollY > 40) {
         if (!isCompact) {
